@@ -76,10 +76,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #77979e;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #536f75; }
   a:hover {
     color: #000;
     text-decoration: underline; }
@@ -109,7 +109,7 @@ code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #eef; }
+  background-color: #e3eaeb; }
 
 code {
   padding: 1px 5px; }
@@ -410,8 +410,7 @@ table {
 
 .display-img {
   border: none;
-  padding: 0px;
-  border-radius: 50%; }
+  padding: 0px; }
 
 /* Create two unequal columns that floats next to each other */
 .column {
@@ -434,24 +433,36 @@ table {
   .header {
     display: block; } }
 .header {
-  display: flex;
   justify-content: space-between;
   align-items: baseline;
   line-height: 1; }
 
 /* DURGA KULLAKANDA */
 .title-text a {
-  color: black;
+  color: #a66767;
   text-decoration: none;
   font-family: 'Teko', sans-serif; }
 
 /* MENU ITEMS */
 .menu-items a {
-  color: black;
-  font-family: 'Roboto Slab', serif; }
+  color: #77979e;
+  font-family: 'Teko', sans-serif;
+  font-weight: bold;
+  font-size: 20px; }
 
 body {
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', serif;
+  color: #3b3b3b; }
+
+.post-content p:first-child::first-letter {
+  color: #77979e;
+  padding: 0 .3rem;
+  margin: 0 .3rem 0 0;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 4rem;
+  float: left;
+  line-height: 1; }
 
 /**
  * Syntax highlighting styles

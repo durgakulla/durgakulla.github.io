@@ -308,7 +308,6 @@
 .display-img{
   border: none;
   padding: 0px;
-  border-radius: 50%;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -339,7 +338,6 @@
 }
 
 .header{
-  display: flex;
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
@@ -347,17 +345,32 @@
 
 /* DURGA KULLAKANDA */
 .title-text a{
-  color: black;
+  color: 	#a66767;
   text-decoration: none;
   font-family: 'Teko', sans-serif;
 }
 
 /* MENU ITEMS */
 .menu-items a{
-  color: black;
-  font-family: 'Roboto Slab', serif;
+  color: #77979e;
+  font-family: 'Teko', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 body{
   font-family: 'Roboto Slab', serif;
+  color: #3b3b3b;
+}
+
+.post-content p:first-child::first-letter {
+  color: #77979e;
+  padding: 0 .3rem;
+  margin: 0 .3rem 0 0;
+  border: 2px solid;
+  border-radius: 8px;
+
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
 }
