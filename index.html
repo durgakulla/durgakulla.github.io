@@ -8,35 +8,42 @@
 layout: home
 ---
 
-{%- if site.posts.size > 0 -%}
 
+<div class="row">
+  <div class="column left">
+    <h3>Hello!</h3>
+    <p>I graduated from Cornell University in 2018 with a B.A. in biological sciences. I'm currently teaching myself machine learning so that I can use it for my work and start new projects. I hope to start medical school in the fall of 2019.</p>
+  </div>
+  <div class="column right">
+    <img class="display-img" width="100%" src="{{site.baseurl}}/assets/img/me_crop.jpg">
+  </div>
+</div>
+
+
+
+{%- if site.posts.size > 0 -%}
+<div class="post-list">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content | strip_html | truncatewords: 50 }}
-  </div>
+  <span class="date">{{ post.date | date_to_long_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="{{ post.url }}">{{ post.title }}</a><br>
 {% endfor %}
-
+</div>
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
-      <
+      Previous
     </a>
   {% else %}
-    <span class="previous"></span>
+    <span class="previous">Previous</span>
   {% endif %}
   <span class="page_number ">
-    Page {{ paginator.page }} of {{ paginator.total_pages }}
+    | Page {{ paginator.page }} of {{ paginator.total_pages }} |
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">></a>
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% else %}
-    <span class="next "></span>
+    <span class="next ">Next</span>
   {% endif %}
 </div>
 {%- endif -%}

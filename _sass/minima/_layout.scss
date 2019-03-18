@@ -1,7 +1,12 @@
 /**
  * Site header
  */
+*{
+  box-sizing: border-box;
+}
+
 .site-header {
+  margin-top: 20px;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -31,16 +36,14 @@
   top: 9px;
   right: $spacing-unit / 2;
   background-color: $background-color;
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  text-align: right;
+  text-align: left;
 
   .nav-trigger {
       display: none;
   }
 
   .menu-icon {
-    float: right;
+    float: left;
     width: 36px;
     height: 26px;
     line-height: 0;
@@ -292,4 +295,49 @@
 .one-half {
   width: -webkit-calc(50% - (#{$spacing-unit} / 2));
   width:         calc(50% - (#{$spacing-unit} / 2));
+}
+
+.post-list{
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.display-img{
+  border: none;
+  padding: 0px;
+  border-radius: 50%;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 800px){
+  .header {
+      display: block;
+  }
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  line-height: 1;
 }
