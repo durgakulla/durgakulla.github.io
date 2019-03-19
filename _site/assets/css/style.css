@@ -126,16 +126,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px));
-  max-width: calc(800px - (30px));
+  max-width: -webkit-calc(900px - (30px));
+  max-width: calc(900px - (30px));
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px; }
   @media screen and (min-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(800px - (30px * 2));
-      max-width: calc(800px - (30px * 2));
+      max-width: -webkit-calc(900px - (30px * 2));
+      max-width: calc(900px - (30px * 2));
       padding-right: 30px;
       padding-left: 30px; } }
 
@@ -351,13 +351,13 @@ table {
 
 .post-title,
 .post-content h1 {
-  font-size: 42px;
+  font-size: 32px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (min-width: 800px) {
     .post-title,
     .post-content h1 {
-      font-size: 42px; } }
+      font-size: 32px; } }
 
 .post-content {
   margin-bottom: 30px; }
@@ -409,8 +409,17 @@ table {
   padding-bottom: 10px; }
 
 .display-img {
-  border: none;
-  padding: 0px; }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  width: 50%; }
+  @media screen and (min-width: 600px) {
+    .display-img {
+      margin-left: 20px;
+      float: right;
+      border-radius: 0%; } }
 
 /* Create two unequal columns that floats next to each other */
 .column {
@@ -435,13 +444,18 @@ table {
 .header {
   justify-content: space-between;
   align-items: baseline;
-  line-height: 1; }
+  line-height: 1;
+  color: #77979e; }
 
 /* DURGA KULLAKANDA */
 .title-text a {
+  font-size: 40px;
   color: #a66767;
   text-decoration: none;
   font-family: 'Teko', sans-serif; }
+
+.title-text {
+  margin-bottom: 0px; }
 
 /* MENU ITEMS */
 .menu-items a {
@@ -449,6 +463,9 @@ table {
   font-family: 'Teko', sans-serif;
   font-weight: bold;
   font-size: 20px; }
+
+.separator {
+  color: red; }
 
 body {
   font-family: 'Roboto Slab', serif;

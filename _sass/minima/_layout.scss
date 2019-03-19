@@ -233,12 +233,12 @@
 
 .post-title,
 .post-content h1 {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2);
   letter-spacing: -1px;
   line-height: 1;
 
   @media screen and (min-width: $on-large) {
-    @include relative-font-size(2.625);
+    @include relative-font-size(2);
   }
 }
 
@@ -305,9 +305,19 @@
   padding-bottom: 10px;
 }
 
-.display-img{
-  border: none;
-  padding: 0px;
+
+.display-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  width: 50%;
+  @media screen and (min-width: $on-medium) {
+    margin-left: 20px;
+    float: right;
+    border-radius: 0%;
+  }
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -341,13 +351,19 @@
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
+  color: #77979e;
 }
 
 /* DURGA KULLAKANDA */
 .title-text a{
+  font-size: 40px;
   color: 	#a66767;
   text-decoration: none;
   font-family: 'Teko', sans-serif;
+}
+
+.title-text{
+  margin-bottom: 0px;
 }
 
 /* MENU ITEMS */
@@ -356,6 +372,10 @@
   font-family: 'Teko', sans-serif;
   font-weight: bold;
   font-size: 20px;
+}
+
+.separator{
+  color: red;
 }
 
 body{
