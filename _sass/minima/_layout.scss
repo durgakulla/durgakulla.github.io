@@ -192,6 +192,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  padding-top: 10px;
   flex: 1 0 auto;
 }
 
@@ -307,17 +308,7 @@
 
 
 .display-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  width: 50%;
-  @media screen and (min-width: $on-medium) {
-    margin-left: 20px;
-    float: right;
-    border-radius: 0%;
-  }
+  margin-bottom: 10px;
 }
 
 /* Create two unequal columns that floats next to each other */
