@@ -104,11 +104,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #77979e;
+  color: darken(#00A3E9, 10%);
   text-decoration: none;
 
   &:visited {
-    color: darken(#77979e, 15%);
+    color: darken(#00A3E9, 20%);
   }
 
   &:hover {
@@ -152,7 +152,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #e3eaeb;
+  background-color: #e5f5fc;
 }
 
 code {

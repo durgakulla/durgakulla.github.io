@@ -229,6 +229,7 @@
  * Posts
  */
 .post-header {
+  margin-top: 20px;
   margin-bottom: $spacing-unit;
 }
 
@@ -342,13 +343,13 @@
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
-  color: #77979e;
+  color: #038D80;
 }
 
 /* DURGA KULLAKANDA */
 .title-text a{
   font-size: 40px;
-  color: 	#a66767;
+  color: #243061;
   text-decoration: none;
   font-family: 'Teko', sans-serif;
 }
@@ -359,10 +360,10 @@
 
 /* MENU ITEMS */
 .menu-items a{
-  color: #77979e;
+  color: #00A3E9;
   font-family: 'Teko', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .separator{
@@ -375,7 +376,7 @@ body{
 }
 
 .post-content p:first-child::first-letter {
-  color: #77979e;
+  color: #00A3E9;
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
   border: 2px solid;

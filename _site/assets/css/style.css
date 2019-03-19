@@ -76,10 +76,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #77979e;
+  color: #007fb6;
   text-decoration: none; }
   a:visited {
-    color: #536f75; }
+    color: #005c83; }
   a:hover {
     color: #000;
     text-decoration: underline; }
@@ -109,7 +109,7 @@ code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #e3eaeb; }
+  background-color: #e5f5fc; }
 
 code {
   padding: 1px 5px; }
@@ -348,6 +348,7 @@ table {
  * Posts
  */
 .post-header {
+  margin-top: 20px;
   margin-bottom: 30px; }
 
 .post-title,
@@ -436,12 +437,12 @@ table {
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
-  color: #77979e; }
+  color: #038D80; }
 
 /* DURGA KULLAKANDA */
 .title-text a {
   font-size: 40px;
-  color: #a66767;
+  color: #243061;
   text-decoration: none;
   font-family: 'Teko', sans-serif; }
 
@@ -450,10 +451,10 @@ table {
 
 /* MENU ITEMS */
 .menu-items a {
-  color: #77979e;
+  color: #00A3E9;
   font-family: 'Teko', sans-serif;
   font-weight: bold;
-  font-size: 20px; }
+  font-size: 22px; }
 
 .separator {
   color: red; }
@@ -463,7 +464,7 @@ body {
   color: #3b3b3b; }
 
 .post-content p:first-child::first-letter {
-  color: #77979e;
+  color: #00A3E9;
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
   border: 2px solid;
