@@ -8,9 +8,10 @@
 layout: home
 ---
 <div class="outer-div"><div class="inner-div"></div></div>
+<h2 class="main-heading">ABOUT ME</h2>
 <div class="intro"><p>I graduated from Cornell University in 2018 with a B.A. in biological sciences. I'm currently teaching myself machine learning so that I can use it for my work and start new projects. I hope to start medical school in the fall of 2019.</p>
 {%- if site.posts.size > 0 -%}
-<h2 class="post-list-header">UPDATES</h2>
+<h2 class="main-heading">UPDATES</h2>
 <div class="post-list">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
