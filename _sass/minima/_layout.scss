@@ -398,7 +398,10 @@ body{
 }
 .inner-div:hover
 {
-     transform: scale(1.1);
+     transform: scale(1);
+     @media screen and (min-width: $on-medium) {
+      transform: scale(1.1);
+     }
 }
 
 .pagination{

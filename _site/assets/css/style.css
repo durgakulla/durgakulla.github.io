@@ -485,7 +485,10 @@ body {
   background-image: url("/assets/img/durga.jpg"); }
 
 .inner-div:hover {
-  transform: scale(1.1); }
+  transform: scale(1); }
+  @media screen and (min-width: 600px) {
+    .inner-div:hover {
+      transform: scale(1.1); } }
 
 .pagination {
   padding-left: 4px;
