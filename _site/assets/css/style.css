@@ -405,7 +405,7 @@ table {
   width: calc(50% - (30px / 2)); }
 
 .post-list {
-  padding-bottom: 10px; }
+  padding-bottom: 0px; }
 
 /* Create two unequal columns that floats next to each other */
 .column {
@@ -488,7 +488,8 @@ body {
   transform: scale(1.1); }
 
 .pagination {
-  opacity: .7; }
+  padding-left: 4px;
+  color: #d3d3d3; }
 
 /**
  * Syntax highlighting styles

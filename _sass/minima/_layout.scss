@@ -301,7 +301,7 @@
 }
 
 .post-list{
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -402,5 +402,9 @@ body{
 }
 
 .pagination{
-  opacity: .7;
+  padding-left: 4px;
+  color: #d3d3d3;
+}
+
+.pagination a{
 }
