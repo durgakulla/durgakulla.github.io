@@ -304,11 +304,6 @@
   padding-bottom: 10px;
 }
 
-
-.display-img {
-  margin-bottom: 10px;
-}
-
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
@@ -390,3 +385,23 @@ body{
   line-height: 1;
 }
 */
+
+.outer-div
+{
+     height: 200px;
+     overflow: hidden;
+     margin-bottom: 10px;
+}
+.inner-div
+{
+     height: 100%;
+     width: 100%;
+     background-size: cover;
+     background-position: center;
+     transition: all 0.5s ease;
+     background-image: url('/assets/img/durga.jpg');
+}
+.inner-div:hover
+{
+     transform: scale(1.1);
+}
