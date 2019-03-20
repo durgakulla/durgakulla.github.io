@@ -10,10 +10,18 @@ layout: home
 <img class="display-img" width="100%" src="{{site.baseurl}}/assets/img/durga.jpg">
 <div class="intro"><p>I graduated from Cornell University in 2018 with a B.A. in biological sciences. I'm currently teaching myself machine learning so that I can use it for my work and start new projects. I hope to start medical school in the fall of 2019.</p>
 {%- if site.posts.size > 0 -%}
+<h2 class="post-list-header">UPDATES</h2>
 <div class="post-list">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <span class="date">{{ post.date | date_to_long_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="{{ post.url }}">{{ post.title }}</a><br>
+<div class="row">
+  <div class="column left">
+    {{ post.date | date_to_long_string }}
+  </div>
+  <div class="column right">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </div>
+</div>
 {% endfor %}
 </div>
 <!-- Pagination links -->

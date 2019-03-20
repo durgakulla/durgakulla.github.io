@@ -3,7 +3,7 @@ author: Durga Kullakanda
 email: durga.kulla@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
  Projects and resume
-paginate: 3
+paginate: 5
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format

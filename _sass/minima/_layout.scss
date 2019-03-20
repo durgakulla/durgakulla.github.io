@@ -205,6 +205,7 @@
 }
 
 .post-list {
+  margin-bottom: 5px;
   margin-left: 0;
   list-style: none;
 
@@ -300,10 +301,6 @@
 }
 
 .post-list{
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  margin-top: 10px;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -315,15 +312,14 @@
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
-  padding: 10px;
+  padding: 3px;
 }
 
 .left {
-  width: 60%;
+  width: 20%;
 }
 
 .right {
-  width: 40%;
 }
 
 /* Clear floats after the columns */
@@ -343,13 +339,13 @@
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
-  color: #038D80;
+  color: #243061;
 }
 
 /* DURGA KULLAKANDA */
 .title-text a{
   font-size: 40px;
-  color: #243061;
+  color: #325488;
   text-decoration: none;
   font-family: 'Teko', sans-serif;
 }
@@ -371,18 +367,24 @@
 }
 
 body{
-  font-family: 'Roboto Slab', serif;
-  color: #3b3b3b;
+  font-family: 'Roboto Condensed', serif;
 }
 
+.post-list-header{
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+/*   DROP CAPS
 .post-content p:first-child::first-letter {
-  color: #00A3E9;
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
-  border: 2px solid;
-  border-radius: 8px;
+  border: 0px solid;
+  border-radius: 0px;
 
   font-size: 4rem;
   float: left;
   line-height: 1;
 }
+*/
