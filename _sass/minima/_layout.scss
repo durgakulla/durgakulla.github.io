@@ -311,6 +311,7 @@
 }
 
 .left {
+  text-align: left;
   width: 100px;
   position: absolute;
 }
@@ -410,4 +411,91 @@ body{
 }
 
 .pagination a{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.masonry {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  color: #333;
+}
+
+.masonry--h {
+  flex-flow: row wrap;
+}
+
+.masonry--v {
+  flex-flow: column wrap;
+  max-height: 1080px;
+}
+
+.masonry--h,
+.masonry--v {
+  margin-left: -8px; /* Adjustment for the gutter */
+  counter-reset: brick;
+}
+
+.masonry-brick {
+  overflow: hidden;
+  border-radius: 0px;
+  margin: 0 0 8px 8px;  /* Some Gutter */
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.masonry-brick--h {
+  flex: auto;
+  height: 250px;
+  min-width: 150px;
+}
+
+@media only screen and (min-width: 420px) {
+  /* Horizontal masonry bricks on desktop-sized screen */
+  .masonry-brick--h:nth-child(4n+1) {
+    width: 250px;
+  }
+  .masonry-brick--h:nth-child(4n+2) {
+    width: 325px;
+  }
+  .masonry-brick--h:nth-child(4n+3) {
+    width: 180px;
+  }
+  .masonry-brick--h:nth-child(4n+4) {
+    width: 380px;
+  }
+
+  /* Adjusting vertical masonry height on desktop-sized screen */
+  .masonry--v {
+    max-height: 1600px;
+  }
+
+  /* Vertical masonry bricks on desktop-sized screen */
+  .masonry-brick--v {
+    width: 33.33333%;
+  }
+}
+
+.masonry-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
