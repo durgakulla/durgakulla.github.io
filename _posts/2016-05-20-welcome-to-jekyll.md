@@ -8,6 +8,8 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 ![My picture alt text](/assets/img/palace.jpg)
 
+I'm now editing on my iPad !!!!
+
 Jekyll also offers powerful support for code snippets:
 
 {% highlight ruby %}
