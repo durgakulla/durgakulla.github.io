@@ -1,199 +1,566 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1671.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 10.5px '.SF NS Text'; color: #2a2823; color: rgba(42, 40, 35, 0.6); -webkit-text-stroke: rgba(42, 40, 35, 0.6)}
-    p.p5 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 18.0px; font: 12.0px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 18.0px; font: 12.0px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.2px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 18.0px '.Apple Color Emoji UI'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    p.p11 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 18.0px; font: 12.0px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823; min-height: 15.0px}
-    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px '.SF NS Text'; color: #2a2823; -webkit-text-stroke: #2a2823}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 30.0px 'Helvetica Neue'; font-kerning: none}
-    span.s3 {font: 22.5px 'Helvetica Neue'; font-kerning: none}
-    span.s4 {font: 12.0px 'Helvetica Neue'; font-kerning: none}
-    span.s5 {font: 12.0px 'Helvetica Neue'; text-decoration: underline ; font-kerning: none}
-    span.s6 {-webkit-text-stroke: 0px #000000}
-    span.s7 {font: 18.0px 'Helvetica Neue'; font-kerning: none}
-    span.s8 {font-kerning: none; background-color: #e6e7e9}
-    span.s9 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #e6e7e9}
-    span.s10 {text-decoration: underline ; font-kerning: none}
-    span.s11 {font-kerning: none; color: #105a87; -webkit-text-stroke: 0px #105a87}
-    span.s12 {font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: 0px #000000}
-    span.s13 {font-kerning: none; color: #136959; -webkit-text-stroke: 0px #136959}
-    ol.ol1 {list-style-type: decimal}
-    ul.ul1 {list-style-type: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1"></span></p>
-<h1 style="margin: 0.0px 0.0px 22.5px 0.0px; line-height: 36.0px; font: 30.0px '.SF NS Display'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s2">Anki Guide for Medical Students</span></h1>
-<p class="p3"><span class="s1">What Is This Guide?</span></p>
-<p class="p3"><span class="s1">1. What is Anki?</span></p>
-<p class="p3"><span class="s1">2. How is Anki different from Quizlet or paper flashcards?</span></p>
-<p class="p3"><span class="s1">3. Installing Anki and Add-ons<span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s1">Intalling Anki</span></p>
-<p class="p3"><span class="s1">Installing add-ons</span></p>
-<p class="p3"><span class="s1">4. Making an Anki Deck</span></p>
-<p class="p3"><span class="s1">5. Setting up Deck Options</span></p>
-<p class="p3"><span class="s1">6. Studying Anki Decks</span></p>
-<p class="p3"><span class="s1">7. Explanation of Anki's Algorithm</span></p>
-<p class="p3"><span class="s1">Learning Phase</span></p>
-<p class="p3"><span class="s1">Review Phase</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px '.SF NS Display Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s3">What Is This Guide?</span></h1>
-<p class="p5"><span class="s1">This guide is intended for medical students who are wanting to learn about </span><span class="s4">what Anki is</span><span class="s1"> and </span><span class="s4">how to use it in medical school</span><span class="s1">. The Anki software is intimidating when first starting to use it, so this guide will teach the basics of navigating the program, making flashcards to study, and how to get the most benefit from studying those flashcards. Later sections will also get into the finer details of the program, which will be useful to know as you get familiar with Anki and would like to tweak things to best fit your needs.</span></p>
-<p class="p5"><span class="s1">At the very least, you should read and follow along with sections 1 through 6 to understand the basics before making and studying your own flashcards.</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px '.SF NS Display Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s3">1. What is Anki?</span></h1>
-<p class="p5"><span class="s1">Anki is a highly customizable </span><span class="s4">flashcard</span><span class="s1"> program. If you've ever used web-based <a href="http://quizlet.com/"><span class="s5">Quizlet</span></a> flashcards, you'll be familiar with the basic concept: you're presented with one side of the flashcard, and then you can reveal the other side to test yourself on pretty much anything. Unfortunately, the high customizability of Anki makes it rather difficult to understand the ins and outs of how the program works. This </span><span class="s4">comprehensive</span><span class="s1"> </span><span class="s4">guide</span><span class="s1"> will teach you everything you need to know to </span><span class="s4">use Anki in the most efficient way possible</span><span class="s1">.</span></p>
-<ul class="ul1">
-  <li class="li1"><span class="s6"></span><span class="s1">See what a Quizlet flashcard looks like<br>
-<a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled.png"></a><br>
-<br>
-</span></li>
-</ul>
-<ul class="ul1">
-  <li class="li1"><span class="s6"></span><span class="s1">See what an Anki flashcard looks like<br>
-<a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%201.png"></a><br>
-<br>
-</span></li>
-</ul>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px '.SF NS Display Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s3">2. How is Anki different from Quizlet or paper flashcards?</span></h1>
-<p class="p5"><span class="s1">It's hard to see on the surface how Anki is different from old-fashioned paper flashcards or applications like Quizlet. Truth be told, Anki's user interface looks quite ugly when you first start using it. Anki's power lies in its </span><span class="s4">implementation</span><span class="s1"> of two key concepts for memorization: </span><span class="s4">active recall</span><span class="s1"> and </span><span class="s4">spaced repetition</span><span class="s1">.</span></p>
-<p class="p5"><span class="s4">Active recall:</span><span class="s1"> a method of learning in which one actively tests their memory by answering questions or recalling information, rather than passively reviewing by re-reading or highlighting text. Flashcards in general leverage the principle of active recall, and the flexibility when making Anki's flashcards makes it a broadly useful tool in medical school. Anki cards can look like traditional front/back flashcards, fill-in-the-blank "cloze" style flashcards, or even images with labels hidden (e.g. for anatomy). Rather than looking at PowerPoint slides over and over again, or re-reading textbooks, Anki cards can help you use active learning in various ways.</span></p>
-<p class="p5"><span class="s4">Spaced repetition:</span><span class="s1"> a learning technique where new flashcards are seen more frequently than older ones. The time interval, which describes the amount of time before you see the same flashcard again, increases each time that flashcard is answered correctly. In Anki, an incorrectly answered flashcard will have its interval reduced so that you will see that card more frequently (since you presumably forgot the information on that specific flashcard).</span></p>
-<p class="p5"><span class="s1">When you reveal the answer to a card, you are presented with buttons asking you to evaulate how well you knew that card. Based on your answer, the interval of that specific card is adjusted accordingly (the new interval is shown above each button). These principles allow you to </span><span class="s4">study only as much as necessary</span><span class="s1"> while </span><span class="s4">improving your retention of material</span><span class="s1">.</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%202.png"></a></span></p>
-<p class="p7"><span class="s1">Each card has a time interval associated with it. Cards you know well will increase in interval each time, giving you time to focus on newer or harder information.</span></p>
-<p class="p5"><span class="s1">Of course, these principles can generally be used when studying from traditional flashcards or Quizlet. Anki allows us to automate the process so we can focus on studying information, and only studying that information when we have to. In addition, Anki users can share flashcard "decks", making collaboration easy. For medical school in particular, many Anki decks exist online which cover courses like anatomy, material from other products/resources medical students use, or even material for the USMLE Step 1.</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px '.SF NS Display Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s3">3. Installing Anki and Add-ons<span class="Apple-converted-space"> </span></span></h1>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px '.SF NS Text Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s7">Intalling Anki</span></h2>
-<p class="p5"><span class="s1">Download and install the latest version of the Anki software using the instructions found on the <a href="https://apps.ankiweb.net/"><span class="s5">Anki website</span></a>.</span></p>
-<p class="p9"><span class="s8">⚙</span></p>
-<p class="p1"><span class="s8">This guide was written with </span><span class="s9">Anki version 2.1</span><span class="s8"> and version </span><span class="s9">2.1 add-ons</span><span class="s8">, but the basic principles will never change. In the future, add-on support might vary by version. It is not recommended to use version 2.0 when following this guide.</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px '.SF NS Text Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s7">Installing add-ons</span></h2>
-<p class="p5"><span class="s1">Add-ons are additional features users have developed which increase the functionality of the base Anki program.<span class="Apple-converted-space"> </span></span></p>
-<p class="p9"><span class="s8">💡</span></p>
-<p class="p1"><span class="s8">To install add-ons: open Anki → open 'Tools' menu → Add-ons → Get Add-ons... → type in the code from the Add-on links below</span></p>
-<p class="p5"><span class="s1">When starting, you'll have to take my word that the following add-ons are </span><span class="s4">essential</span><span class="s1"> to have a good Anki experience:</span></p>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1835859645"><span class="s10">Hierarchical Tags</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1374772155"><span class="s10">Image Occlusion Enhanced</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1102281552"><span class="s10">Special Fields</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/516643804"><span class="s10">Frozen Fields</span></a></span></li>
-</ol>
-<p class="p5"><span class="s1">Here are some additional (</span><span class="s4">optional</span><span class="s1">) add-ons that change the apperance of Anki or provide extra statistics:</span></p>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1496166067"><span class="s10">Night Mode</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://github.com/glutanimate/review-heatmap"><span class="s10">Review Heatmap</span></a></span><span class="s1"> (scroll down to Manual installation and follow the instructions for Anki 2.1)</span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1556734708"><span class="s10">More Decks Stats and Time Left</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/738807903"><span class="s10">More Overview Stats 2.1</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/1828603731"><span class="s10">Stats Overview Pie Graph</span></a></span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"><a href="https://ankiweb.net/shared/info/923360400"><span class="s10">True Retention by Card Maturity</span></a></span></li>
-</ol>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1">4. Making an Anki Deck</span></h1>
-<p class="p5"><span class="s1">Now that you've installing Anki and the add-ons listed above, Anki should look like this when you start the program (the following screenshots are taken with the "Night Mode" add-on, as well as all of the other optional add-ons mentioned above):</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%203.png"></a></span></p>
-<p class="p5"><span class="s1">Let's say we want to make some cards for a lecture on childhood viral infections. Here is an example of a powerpoint slide we want to make flashcards for:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%204.png"></a></span></p>
-<p class="p5"><span class="s1">In Anki, click on the "Add" button. In this window, change the "Type" to "Cloze". This allows us to make fill-in-the-blank style cards, but we can also make cards in a question/answer format. For this reason, I make cards exlusively in the cloze type so that I don't have to switch back and forth and use multiple card types.<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1">We need to make a flashcard deck for these new cards to go into. Click on the Deck button (which should be set to Default when first starting out), click on the "Add" button, and give this deck a name. For this example, I've named my deck "Week 1::Childhood viral infections" (we'll see what the "::" does soon). The Add window should now look like this:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%205.png"></a></span></p>
-<p class="p5"><span class="s1">Next we type out our question and answer in the "Text" field. Then, highlight the answer you've written out, and press "command/ctrl+shift+c". The "cloze" syntax that is added means that the text within the brackets is the "blank" part of the fill-in-the-blank when we study these cards. In this case, I am blanking out the answer to a question:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%206.png"></a></span></p>
-<p class="p7"><span class="s1">Select the text that you want hidden when you first see the card. In this case, the answer to the question will be hidden.</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%207.png"></a></span></p>
-<p class="p7"><span class="s1">Pressing "command/ctrl+shift+c" adds the cloze "{{c1:: }}" syntax. The text in the middle will be hidden when studying the card.</span></p>
-<p class="p5"><span class="s1">This part is optional, but I like to add a screenshot of wherever I got the information for the card in the card itself. To do this, just add the screenshot image file into the "Extra" field:</span></p>
-<p class="p9"><span class="s8">💡</span></p>
-<p class="p1"><span class="s8">On MacOS, press "command+control+Shift+4" to take a screenshot and copy it directly to the clipboard. Now you can quickly paste ("command+v") the screenshot into the "Extra" field. I make the<span class="Apple-converted-space">  </span>screenshot shortcut easier to press by remapping it to "command+shift+1". You can set this up by going to System Preferences → Keyboard → "Shortcuts" tab → Screenshots → change key combination for "Copy picture of selected area to clipboard" to "command+shift+1".</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%208.png"></a></span></p>
-<p class="p5"><span class="s1">You can add tags to cards you make, but I find that this gets tedious especially if you don't keep up with cards after the exam they're covered on, so I don't tag cards I don't intend to study beyond that exam. Instead, I make a separate deck for each lecture and organize them as "sub-decks", which I will soon explain. Press "cmd/ctrl + enter" or the "Add" button to add the card to the deck you just created. Repeat this process to add as many cards as needed to this deck. You can also add more cards later but going into this Add window and making sure the "Deck" is set to the deck you want to add cards to.</span></p>
-<p class="p5"><span class="s1">Let's take a look at the main Anki window now:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%209.png"></a></span></p>
-<p class="p5"><span class="s1">Remember how I named my deck "Week 1::Childhood viral infections"? The two colons "::" indicate that you are making a deck that falls under a parent deck. These decks are called "sub-decks". In the image above, we can see the main "Week 1" deck, with the subdeck which would contain all the cards from the lecture "Childhood viral infections". You can organize your decks and subdecks however you find convenient, but it is always good to have one parent deck which contains all of the lecture subdecks you need to study for a particular exam, for example. This way, when you study the cards, you can get an assortment of questions from all of your lectures instead of studying just one lecture at a time.</span></p>
-<p class="p5"><span class="s1">Here is an example of one of my decks. I organize decks by the following deck naming convention - "module::testnumber::weeknumber::lecturename". This way, I can click on the Test 1 parent deck to study all of the cards for Test 1, or I can study from the Week 1 deck to study only that material:</span></p>
-<p class="p11"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2010.png"></a></span></p>
-<p class="p9"><span class="s8">💡</span></p>
-<p class="p1"><span class="s8">Use whatever organization works for you! Instead of re-naming the decks, you can move decks around by clicking and dragging too.</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1">5. Setting up Deck Options</span></h1>
-<p class="p5"><span class="s1">You have now created a deck (or several) covering material you want to memorize. Before you study your cards, we have to make sure Anki's algorithm for how often you see cards is optimized for your situation. For now, you'll have to take a leap of faith and use the following settings when studying your cards. Read the section on understanding and adjusting settings for in-depth explanations of what all of this means.</span></p>
-<p class="p5"><span class="s1">First, go into Anki preferences ("Anki" in the menu bar → Preferences). Make sure the "Experimental V2 scheduler" is checked, and accept any warnings the program displays. Your preferences window should look like this:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2011.png"></a></span></p>
-<p class="p5"><span class="s1">Click on the cogwheel/settings icon next to any of your decks, and click "Options". Keep the "Options group" set to "Default". This way, these settings will apply to any deck you create in the future. Copy these settings exactly (leave the General and Description tabs the same), and then click "OK":</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"></a></span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2013.png"></a></span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2014.png"></a></span></p>
-<p class="p5"><span class="s1">Now you're ready to study. Click on a parent deck or subdeck (depending on whether you want to study multiple decks at a time, or a particular deck/subset of decks) and click "study Now".</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1">6. Studying Anki Decks</span></h1>
-<p class="p5"><span class="s1">Let's say I've just created a deck of 28 </span><span class="s11">new</span><span class="s1"> cards for a lecture I had named "Introduction to Virology":</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2015.png"></a></span></p>
-<p class="p7"><span class="s1">The "Introduction to Virology" deck shows 28 new cards since I have not studied any yet.</span></p>
-<p class="p5"><span class="s1">Because I have a full set of cards for that lecture, I'd like to start studying it. As stated above, to study this "Introduction to Virology" deck, I would click on it and then click "Study Now". The first card in that deck will pop up:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2016.png"></a></span></p>
-<p class="p7"><span class="s1">A card I've made in question/answer format. The answer was "clozed" out when I made the card, so it is initially hidden.</span></p>
-<p class="p5"><span class="s1">When you see the front of a card like this, come up with the answer to the question if you can. Once you've done that (or if you can't come up with anything), press the spacebar or click on "Show Answer" to reveal the answer:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2017.png"></a></span></p>
-<p class="p7"><span class="s1">The answer to the card from the previous picture. Note that both the typed out answer and the screenshot I add to the "Extra" section is shown.</span></p>
-<p class="p5"><span class="s1">Now, you have to evaluate how you well you knew the answer to that card and whether you got the answer right or not. Based on this evaluation, you must press one of the buttons presented at the bottom of the window. Here is how to decide which button to click:</span></p>
-<ol class="ol1">
-  <li class="li1"><span class="s6"></span><span class="s1">"I got this question wrong" OR "I knew the answer but I couldn't remember it" → click "</span><span class="s4">Again</span><span class="s1">" or press 1</span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"></span><span class="s1">"I answered this question correctly" → click "</span><span class="s4">Good</span><span class="s1">" or press spacebar</span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s6"></span><span class="s1">"I answered this question correctly, but it took me considerable effort to do so" → click "</span><span class="s4">Hard</span><span class="s1">" — This option will not appear on cards in the learning phase. More on that later.</span></li>
-</ol>
-<ol class="ol1">
-  <li class="li1"><span class="s12"></span><span class="s4">NEVER</span><span class="s1"> </span><span class="s4">PRESS</span><span class="s1"> "</span><span class="s4">Easy</span><span class="s1">" - I'll explain below</span></li>
-</ol>
-<p class="p5"><span class="s1">Almost always, you should be pressing "Good" or "Again". As the same card comes up again and again, pressing "Good" will increase the interval of the card (the amount of time it takes for that card to come back for you to review). Hitting "Again" will ensure that you see that card sooner and will see it more often than cards you know well. The reason you should never press easy is because the intervals will start to get very long very quickly, so you shouldn't press it unless you know the question cold. But if that's the case, that card probably isn't very useful anyway.</span></p>
-<p class="p5"><span class="s1">You can see what the new interval of the card would be if you pressed each button above the buttons. In the picture above, if I got the question correct, I would press "Good" and I would see the card 3 hours later.</span></p>
-<p class="p9"><span class="s8">💡</span></p>
-<p class="p1"><span class="s8">It's important to be honest when evaluating your answer. If you click "Good" but don't really understand a concept, you'll see that card less often and you may not learn it well.</span></p>
-<p class="p5"><span class="s1">Repeat this process for all of the cards in your deck, and you'll see that the main screen shows that you have no new cards left, and nothing due either:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2018.png"></a></span></p>
-<p class="p5"><span class="s1">After around 3 hours (or in 20 minutes if you hit "Again" on some cards), you will see that cards in that deck will reappear, but this time they will count as cards that are "</span><span class="s13">Due</span><span class="s1">":</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2019.png"></a></span></p>
-<p class="p5"><span class="s1">All you have to do now is complete the due cards whenever they appear, and add and learn new cards as you go through classes or studying.</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 27.0px; font: 22.5px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1">7. Explanation of Anki's Algorithm</span></h1>
-<p class="p5"><span class="s1">Remember when we set up the Deck Options earlier? This is how the program calculates when you'll see new cards next. The "Steps" option that we set to "20 180 1440 4320" in particular is most relevant:</span></p>
-<p class="p6"><span class="s1"><a href="file:///Users/durga/Downloads/anki/Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"></a></span></p>
-<p class="p7"><span class="s1">The Deck Options that were set up earlier. Notice the "Steps" correspond to the "Again" and "Good" intervals seen on the first card.</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px '.SF NS Text Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s7">Learning Phase</span></h2>
-<p class="p5"><span class="s1">The "20 180 1440 4320" that we set are called the "</span><span class="s4">learning steps</span><span class="s1">". When you first start studying a card, it is considered to be in the "</span><span class="s4">learning phase</span><span class="s1">". If you click "Good" the first time you see a card, you will see that card in 180 minutes (3 hours) — the card moves to the next learning step. For our settings, we would see the card in 3 hours, then 1 day, then 3 days. If you hit "</span><span class="s4">Good</span><span class="s1">" after that 3 day interval, since the "4320" was the last interval step we provided in the options, the card "</span><span class="s4">graduates</span><span class="s1">" and goes into the "</span><span class="s4">review phase</span><span class="s1">". The next interval is set to be the graduating interval, which we set to 7 days in the options.</span></p>
-<p class="p5"><span class="s1">Clicking "</span><span class="s4">Again</span><span class="s1">" while a card is in the learning phase moves the card back to the first step. In our case, you would see the card in 20 minutes, and then 3 hours, and so on.</span></p>
-<p class="p5"><span class="s1">Clicking "</span><span class="s4">Easy</span><span class="s1">" at any time during the learning phase immedaitely turns that card into a review card (skipping all remaining learning steps), and its interval is set to the "Easy interval" which we set to 6 days.</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px '.SF NS Text Semibold'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s7">Review Phase</span></h2>
-<p class="p5"><span class="s1">Once a card goes through all of the learning steps and graduates, the Anki interval algorithm takes over. When you see that card after 7 days and hit "</span><span class="s4">Good</span><span class="s1">", Anki multiplies that 7 day interval by the "</span><span class="s4">Ease</span><span class="s1">" which we set to start at 250% to calculate the new interval: 7 days * 2.5 = 17.5 days. So you'll see that card after 17 days.</span></p>
-<p class="p5"><span class="s1">Clicking "</span><span class="s4">Hard</span><span class="s1">" means you still answered the card correctly, so that card's interval increases. The current interval is mulitplied by 1.2 to calculate the next interval. For the first card, this would be 7 days * 1.2 = 8.4 days. Additionally, that card's </span><span class="s4">ease</span><span class="s1"> is decreased by 15%. That means this card's ease is now 235%, meaning you will see the card more frequently (e.g. next time you see the card and hit "Good", the next interval will be shorter than it would have been if the ease remained at 250%).</span></p>
-<p class="p5"><span class="s1">Clicking "</span><span class="s4">Easy</span><span class="s1">" (which should NOT be happening a lot for the reasons stated above) means the current interval is multiplied by the card's ease * easy bonus (which we set to 130%). For this card, that would be 7 days * 2.5 * 1.3 = 22.75 days. Because the card's ease increased, it's intervals will increase at a faster rate, so you will study this card far less than cards you hit Good or Hard on.</span></p>
-<p class="p5"><span class="s1">Clicking "</span><span class="s4">Again</span><span class="s1">" on a card in the review phase means that card has "</span><span class="s4">lapsed</span><span class="s1">" and the card enters the "</span><span class="s4">relearning phase</span><span class="s1">". The card's ease is decreased by 20%, meaning you will see this card more often in the future. The card's next interval is calculated as current interval * New interval, which we set to be 40%. For this card, that would be 7 days * 0.4 = 2.8 days. Before this interval is used, Anki will show the card again to relearn, according to the steps in the Lapses section of the deck options. We set this to "20 180", meaning you will see the card 20 minutes later, and then 3 hours later before seeing the card about 2.8 days later (when it is back in the review phase).</span></p>
-<p class="p9"><span class="s8">💡</span></p>
-<p class="p1"><span class="s8">The calculated intervals in the review phase have a bit of "fuzz" built into them. For example, instead of seeing the card exactly 17.5 days later, you might see it in 16 days, or in 19 days. This prevents cards that were started together from always coming up on the same day each time you review.</span></p>
-</body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Anki Guide for Medical Students</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e7ae52bd-727c-42b9-a756-a7774a1fe7e9" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Anki Guide for Medical Students</h1></header><div class="page-body"><nav id="c83cf1e4-d1ec-46a1-820a-0703bb05d7cf" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3e38efd6-509d-4391-9b64-762e60c3abd6">What Is This Guide?</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c5e6e9dd-8d34-4794-89f1-6f9a56547b9f">1. What is Anki?</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8253e0e4-146e-41ee-9580-7987afeb6e16">2. How is Anki different from Quizlet or paper flashcards?</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8e2f428f-1f54-481e-9150-5bf02f7401c2">3. Installing Anki and Add-ons </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ca2b31dc-aae8-4aa1-8c45-d71da0dbf083">Intalling Anki</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#70b35a5a-c996-4d24-aa93-3759557c5856">Installing add-ons</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3e40fd75-c2f0-4cc7-9626-a95f8d24ae7b">4. Making an Anki Deck</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#38a23e80-6dc3-4735-8d35-bfa408d8168d">5. Setting up Deck Options</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#de8f8b47-17f1-4300-9c19-1a0ddbaad792">6. Studying Anki Decks</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2e02d796-9934-43a0-a68f-e08c842fbd2f">7. Explanation of Anki&#x27;s Algorithm</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#657d4432-4f10-491f-b53a-bfd3199e4dc0">Learning Phase</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2ee30c74-5a98-4ae7-bca6-e28c05213501">Review Phase</a></div></nav><h1 id="3e38efd6-509d-4391-9b64-762e60c3abd6" class="">What Is This Guide?</h1><p id="d60abb43-dab2-4d27-aa7f-a272025ea8f7" class="">This guide is intended for medical students who are wanting to learn about <strong>what Anki is</strong> and <strong>how to use it in medical school</strong>. The Anki software is intimidating when first starting to use it, so this guide will teach the basics of navigating the program, making flashcards to study, and how to get the most benefit from studying those flashcards. Later sections will also get into the finer details of the program, which will be useful to know as you get familiar with Anki and would like to tweak things to best fit your needs.</p><p id="5d2056cf-0534-42de-a9ed-d529817311b1" class="">At the very least, you should read and follow along with sections 1 through 6 to understand the basics before making and studying your own flashcards.</p><h1 id="c5e6e9dd-8d34-4794-89f1-6f9a56547b9f" class="">1. What is Anki?</h1><p id="6400f710-1325-405a-a061-2a6937667956" class="">Anki is a highly customizable <strong>flashcard</strong> program. If you&#x27;ve ever used web-based <strong><a href="http://quizlet.com">Quizlet</a></strong> flashcards, you&#x27;ll be familiar with the basic concept: you&#x27;re presented with one side of the flashcard, and then you can reveal the other side to test yourself on pretty much anything. Unfortunately, the high customizability of Anki makes it rather difficult to understand the ins and outs of how the program works. This <strong>comprehensive</strong> <strong>guide</strong> will teach you everything you need to know to <strong>use Anki in the most efficient way possible</strong>.</p><ul id="28e19da3-2fb0-424a-9204-f11b659258a0" class="toggle"><li><details open=""><summary>Quizlet flashcard example</summary><figure id="75e4cf8f-a5d2-45a1-bd54-b3faf79934ca" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled.png"><img style="width:672px" src="Anki%20Guide%20for%20Medical%20Students/Untitled.png"/></a></figure></details></li></ul><ul id="9b27e28f-4f82-4c08-997a-10e7eb26d8e6" class="toggle"><li><details open=""><summary>Anki flashcard example</summary><figure id="ac9c46bb-c067-46eb-9b20-619a4ea382e3" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%201.png"><img style="width:624px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%201.png"/></a></figure></details></li></ul><h1 id="8253e0e4-146e-41ee-9580-7987afeb6e16" class="">2. How is Anki different from Quizlet or paper flashcards?</h1><p id="9c283e38-0ff0-4a4e-afd9-e657cbfc02c0" class="">It&#x27;s hard to see on the surface how Anki is different from old-fashioned paper flashcards or applications like Quizlet. Truth be told, Anki&#x27;s user interface looks quite ugly when you first start using it. Anki&#x27;s power lies in its <em>implementation</em> of two key concepts for memorization: <strong>active recall</strong> and <strong>spaced repetition</strong>.</p><p id="2c0d56a0-02b0-41ef-8b3d-200fb43acb4b" class=""><strong>Active recall:</strong> a method of learning in which one actively tests their memory by answering questions or recalling information, rather than passively reviewing by re-reading or highlighting text. Flashcards in general leverage the principle of active recall, and the flexibility when making Anki&#x27;s flashcards makes it a broadly useful tool in medical school. Anki cards can look like traditional front/back flashcards, fill-in-the-blank &quot;cloze&quot; style flashcards, or even images with labels hidden (e.g. for anatomy). Rather than looking at PowerPoint slides over and over again, or re-reading textbooks, Anki cards can help you use active learning in various ways.</p><p id="1391c8d5-e7fa-40af-ab91-717551955849" class=""><strong>Spaced repetition:</strong> a learning technique where new flashcards are seen more frequently than older ones. The time interval, which describes the amount of time before you see the same flashcard again, increases each time that flashcard is answered correctly. In Anki, an incorrectly answered flashcard will have its interval reduced so that you will see that card more frequently (since you presumably forgot the information on that specific flashcard).</p><p id="bc01850e-f855-44b8-b36a-dfe4f636862e" class="">When you reveal the answer to a card, you are presented with buttons asking you to evaulate how well you knew that card. Based on your answer, the interval of that specific card is adjusted accordingly (the new interval is shown above each button). These principles allow you to <strong>study only as much as necessary</strong> while <strong>improving your retention of material</strong>.</p><figure id="fdbe3d90-1646-480a-9b75-7ec6328a8077" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%202.png"><img style="width:336px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%202.png"/></a><figcaption>Each card has a time interval associated with it. Cards you know well will increase in interval each time, giving you time to focus on newer or harder information.</figcaption></figure><p id="01c3b1d4-43f8-4152-980d-c8f39495975c" class="">Of course, these principles can generally be used when studying from traditional flashcards or Quizlet. Anki allows us to automate the process so we can focus on studying information, and only studying that information when we have to. In addition, Anki users can share flashcard &quot;decks&quot;, making collaboration easy. For medical school in particular, many Anki decks exist online which cover courses like anatomy, material from other products/resources medical students use, or even material for the USMLE Step 1.</p><h1 id="8e2f428f-1f54-481e-9150-5bf02f7401c2" class="">3. Installing Anki and Add-ons </h1><h2 id="ca2b31dc-aae8-4aa1-8c45-d71da0dbf083" class="">Intalling Anki</h2><p id="89d121ac-a4f8-49ef-903e-6878c7cecd8a" class="">Download and install the latest version of the Anki software using the instructions found on the <strong><a href="https://apps.ankiweb.net/">Anki website</a></strong>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e529dea4-2632-4271-9fc3-d464db8400cb"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">This guide was written with <strong>Anki version 2.1</strong> and version <strong>2.1 add-ons</strong>, but the basic principles will never change. In the future, add-on support might vary by version. It is not recommended to use version 2.0 when following this guide.</div></figure><h2 id="70b35a5a-c996-4d24-aa93-3759557c5856" class="">Installing add-ons</h2><p id="23bce33e-ab17-4fc5-ad08-510ef792fe7f" class="">Add-ons are additional features users have developed which increase the functionality of the base Anki program. </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="43ff4152-7038-494a-b1ad-79994a7e8298"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">To install add-ons: open Anki → open &#x27;Tools&#x27; menu → Add-ons → Get Add-ons... → type in the code from the Add-on links below</div></figure><p id="b005391b-c846-4d85-ae08-9bbbb958eaf4" class="">When starting, you&#x27;ll have to take my word that the following add-ons are <strong>essential</strong> to have a good Anki experience:</p><ol id="95a1ef87-6521-4951-8678-5a2a46d16781" class="numbered-list" start="1"><li><a href="https://ankiweb.net/shared/info/1835859645">Hierarchical Tags</a></li></ol><ol id="d5d1f95a-cb41-4d41-94e8-72ba0fa73585" class="numbered-list" start="2"><li><a href="https://ankiweb.net/shared/info/1374772155">Image Occlusion Enhanced</a></li></ol><ol id="5496548e-6743-43a8-9739-11ee8e990f84" class="numbered-list" start="3"><li><a href="https://ankiweb.net/shared/info/1102281552">Special Fields</a></li></ol><ol id="d514e761-4112-4bca-92eb-104219f5a1e9" class="numbered-list" start="4"><li><a href="https://ankiweb.net/shared/info/516643804">Frozen Fields</a></li></ol><p id="550d5270-e556-4d37-8898-559e7cbe6c14" class="">Here are some additional (<strong>optional</strong>) add-ons that change the apperance of Anki or provide extra statistics:</p><ol id="177b7bad-6384-4676-9178-053904fb5a5e" class="numbered-list" start="1"><li><a href="https://ankiweb.net/shared/info/1496166067">Night Mode</a></li></ol><ol id="7f062ab7-1332-4ea4-8907-e7c3644a6005" class="numbered-list" start="2"><li><a href="https://github.com/glutanimate/review-heatmap">Review Heatmap</a> (scroll down to Manual installation and follow the instructions for Anki 2.1)</li></ol><ol id="9a80394f-4760-4e7d-a206-0683ca091c0c" class="numbered-list" start="3"><li><a href="https://ankiweb.net/shared/info/1556734708">More Decks Stats and Time Left</a></li></ol><ol id="14258419-375f-4e44-a59e-4fb309c0b6c5" class="numbered-list" start="4"><li><a href="https://ankiweb.net/shared/info/738807903">More Overview Stats 2.1</a></li></ol><ol id="f147de64-2ac8-4624-8322-e277d9432c8c" class="numbered-list" start="5"><li><a href="https://ankiweb.net/shared/info/1828603731">Stats Overview Pie Graph</a></li></ol><ol id="d117bf90-36f8-4c31-8ec8-069f9c83febb" class="numbered-list" start="6"><li><a href="https://ankiweb.net/shared/info/923360400">True Retention by Card Maturity</a></li></ol><h1 id="3e40fd75-c2f0-4cc7-9626-a95f8d24ae7b" class="">4. Making an Anki Deck</h1><p id="db54a8a1-e4d0-4c71-9a06-f91937bed003" class="">Now that you&#x27;ve installing Anki and the add-ons listed above, Anki should look like this when you start the program (the following screenshots are taken with the &quot;Night Mode&quot; add-on, as well as all of the other optional add-ons mentioned above):</p><figure id="6dc62b84-7861-4951-a0e2-8387ab20cf61" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%203.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%203.png"/></a></figure><p id="35c503a3-2866-49ec-ba81-63c7790c7a5b" class="">Let&#x27;s say we want to make some cards for a lecture on childhood viral infections. Here is an example of a powerpoint slide we want to make flashcards for:</p><figure id="6f4b2020-7cdd-4034-bdf0-b5459fafead6" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%204.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%204.png"/></a></figure><p id="a9e9ae9e-758f-42ae-acff-b6f8146c2fb9" class="">In Anki, click on the &quot;Add&quot; button. In this window, change the &quot;Type&quot; to &quot;Cloze&quot;. This allows us to make fill-in-the-blank style cards, but we can also make cards in a question/answer format. For this reason, I make cards exlusively in the cloze type so that I don&#x27;t have to switch back and forth and use multiple card types. </p><p id="0a5b89c0-5e87-4891-8bd5-e8b28569aebc" class="">We need to make a flashcard deck for these new cards to go into. Click on the Deck button (which should be set to Default when first starting out), click on the &quot;Add&quot; button, and give this deck a name. For this example, I&#x27;ve named my deck &quot;Week 1::Childhood viral infections&quot; (we&#x27;ll see what the &quot;::&quot; does soon). The Add window should now look like this:</p><figure id="14241b0c-fa97-45ea-9d4f-1031743a2abf" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%205.png"><img style="width:384px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%205.png"/></a></figure><p id="9dee1ed5-6bb3-4cf4-9932-d60637d00791" class="">Next we type out our question and answer in the &quot;Text&quot; field. Then, highlight the answer you&#x27;ve written out, and press &quot;command/ctrl+shift+c&quot;. The &quot;cloze&quot; syntax that is added means that the text within the brackets is the &quot;blank&quot; part of the fill-in-the-blank when we study these cards. In this case, I am blanking out the answer to a question:</p><div id="ea18be54-59d5-4dd1-ab93-9d184eaf977e" class="column-list"><div id="b4b66652-0e84-426f-8fce-e49e27ef7e9a" style="width:50%" class="column"><figure id="8e9ae62d-547a-46da-85e2-becaf985778c" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%206.png"><img style="width:384px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%206.png"/></a><figcaption>Select the text that you want hidden when you first see the card. In this case, the answer to the question will be hidden.</figcaption></figure></div><div id="54a4e42f-46da-461a-ae3e-eb453f918475" style="width:50%" class="column"><figure id="75800dd6-c447-4ba3-a614-dd06ebc311b7" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%207.png"><img style="width:384px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%207.png"/></a><figcaption>Pressing &quot;command/ctrl+shift+c&quot; adds the cloze &quot;{{c1:: }}&quot; syntax. The text in the middle will be hidden when studying the card.</figcaption></figure></div></div><p id="f9c72c5b-27e6-4c27-863f-84343642d468" class="">This part is optional, but I like to add a screenshot of wherever I got the information for the card in the card itself. To do this, just add the screenshot image file into the &quot;Extra&quot; field:</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="05d9d1be-f521-443c-b05e-c6f7a49eb9d3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">On MacOS, press &quot;command+control+Shift+4&quot; to take a screenshot and copy it directly to the clipboard. Now you can quickly paste (&quot;command+v&quot;) the screenshot into the &quot;Extra&quot; field. I make the  screenshot shortcut easier to press by remapping it to &quot;command+shift+1&quot;. You can set this up by going to System Preferences → Keyboard → &quot;Shortcuts&quot; tab → Screenshots → change key combination for &quot;Copy picture of selected area to clipboard&quot; to &quot;command+shift+1&quot;.</div></figure><figure id="884a4d5f-ae27-4b3d-95cb-b1fd4195452a" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%208.png"><img style="width:480px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%208.png"/></a></figure><p id="fdfd1f29-265f-4d2a-bfc7-f4b1ace728e6" class="">You can add tags to cards you make, but I find that this gets tedious especially if you don&#x27;t keep up with cards after the exam they&#x27;re covered on, so I don&#x27;t tag cards I don&#x27;t intend to study beyond that exam. Instead, I make a separate deck for each lecture and organize them as &quot;sub-decks&quot;, which I will soon explain. Press &quot;cmd/ctrl + enter&quot; or the &quot;Add&quot; button to add the card to the deck you just created. Repeat this process to add as many cards as needed to this deck. You can also add more cards later but going into this Add window and making sure the &quot;Deck&quot; is set to the deck you want to add cards to.</p><p id="70b8e6d3-6221-4c82-9672-d87ef8b3c56e" class="">Let&#x27;s take a look at the main Anki window now:</p><figure id="0b85175b-dc57-4be0-b1bc-680d8a067e51" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%209.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%209.png"/></a></figure><p id="3bff5fe6-04a2-40a0-aa5d-da6e008252c2" class="">Remember how I named my deck &quot;Week 1::Childhood viral infections&quot;? The two colons &quot;::&quot; indicate that you are making a deck that falls under a parent deck. These decks are called &quot;sub-decks&quot;. In the image above, we can see the main &quot;Week 1&quot; deck, with the subdeck which would contain all the cards from the lecture &quot;Childhood viral infections&quot;. You can organize your decks and subdecks however you find convenient, but it is always good to have one parent deck which contains all of the lecture subdecks you need to study for a particular exam, for example. This way, when you study the cards, you can get an assortment of questions from all of your lectures instead of studying just one lecture at a time.</p><p id="7b150a51-607e-4940-9efb-1f6203fb04a0" class="">Here is an example of one of my decks. I organize decks by the following deck naming convention - &quot;module::testnumber::weeknumber::lecturename&quot;. This way, I can click on the Test 1 parent deck to study all of the cards for Test 1, or I can study from the Week 1 deck to study only that material:</p><p id="ff346029-5a4e-4422-88b3-43da70e5c554" class="">
+</p><figure id="8e9cb0cc-5286-4ab7-bc43-ddd25b0ff973" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2010.png"><img style="width:480px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2010.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="265f6c19-7f2b-4454-afc2-661d08326e7a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Use whatever organization works for you! Instead of re-naming the decks, you can move decks around by clicking and dragging too.</div></figure><h1 id="38a23e80-6dc3-4735-8d35-bfa408d8168d" class="">5. Setting up Deck Options</h1><p id="492830e0-1fbd-4a5f-822e-4e87891d5049" class="">You have now created a deck (or several) covering material you want to memorize. Before you study your cards, we have to make sure Anki&#x27;s algorithm for how often you see cards is optimized for your situation. For now, you&#x27;ll have to take a leap of faith and use the following settings when studying your cards. Read the section on understanding and adjusting settings for in-depth explanations of what all of this means.</p><p id="0e28fe35-06be-4517-a98f-44eb4a3c835d" class="">First, go into Anki preferences (&quot;Anki&quot; in the menu bar → Preferences). Make sure the &quot;Experimental V2 scheduler&quot; is checked, and accept any warnings the program displays. Your preferences window should look like this:</p><figure id="397c5556-253f-4f5a-8156-db7d77e275f3" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2011.png"><img style="width:288px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2011.png"/></a></figure><p id="fe1c6a04-f190-4b94-8b38-869add94e258" class="">Click on the cogwheel/settings icon next to any of your decks, and click &quot;Options&quot;. Keep the &quot;Options group&quot; set to &quot;Default&quot;. This way, these settings will apply to any deck you create in the future. Copy these settings exactly (leave the General and Description tabs the same), and then click &quot;OK&quot;:</p><div id="358ac365-c376-492b-a3ea-6c643dc37f33" class="column-list"><div id="058d99e2-bdd5-423d-b0be-ee1309f85e17" style="width:33.333333333333336%" class="column"><figure id="47e3d7b4-38a9-4244-a36f-c543604836e4" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"><img style="width:931px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"/></a></figure></div><div id="74b45ca9-ae58-4568-88d5-c71ded92e284" style="width:33.333333333333336%" class="column"><figure id="18fe1afb-9669-4c17-946a-845c64c5cf2a" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2013.png"><img style="width:931px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2013.png"/></a></figure></div><div id="7e1d2acf-db86-4e5a-b4a7-6a3571c34484" style="width:33.33333333333333%" class="column"><figure id="ac3861e8-5aee-4d65-81e1-f8abbb4f4b7a" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2014.png"><img style="width:931px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2014.png"/></a></figure></div></div><p id="5989920f-1ef1-4d43-a56b-22dee1073d1d" class="">Now you&#x27;re ready to study. Click on a parent deck or subdeck (depending on whether you want to study multiple decks at a time, or a particular deck/subset of decks) and click &quot;study Now&quot;.</p><h1 id="de8f8b47-17f1-4300-9c19-1a0ddbaad792" class="">6. Studying Anki Decks</h1><p id="a3521d09-0dd4-4af4-875a-ff5a1a12380e" class="">Let&#x27;s say I&#x27;ve just created a deck of 28 <mark class="highlight-blue">new</mark> cards for a lecture I had named &quot;Introduction to Virology&quot;:</p><figure id="645477c0-3cfd-4a35-b1f7-f168956b6446" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2015.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2015.png"/></a><figcaption>The &quot;Introduction to Virology&quot; deck shows 28 new cards since I have not studied any yet.</figcaption></figure><p id="effbb9d1-9298-49b6-946e-a6361424e4db" class="">Because I have a full set of cards for that lecture, I&#x27;d like to start studying it. As stated above, to study this &quot;Introduction to Virology&quot; deck, I would click on it and then click &quot;Study Now&quot;. The first card in that deck will pop up:</p><figure id="33f0f4d6-7bc8-40b8-8208-53757adf7cb2" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2016.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2016.png"/></a><figcaption>A card I&#x27;ve made in question/answer format. The answer was &quot;clozed&quot; out when I made the card, so it is initially hidden.</figcaption></figure><p id="213dcd9a-f397-4baa-a3e1-4f1036822292" class="">When you see the front of a card like this, come up with the answer to the question if you can. Once you&#x27;ve done that (or if you can&#x27;t come up with anything), press the spacebar or click on &quot;Show Answer&quot; to reveal the answer:</p><figure id="4a1542a1-df72-43f4-96af-182036bcfc27" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2017.png"><img style="width:432px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2017.png"/></a><figcaption>The answer to the card from the previous picture. Note that both the typed out answer and the screenshot I add to the &quot;Extra&quot; section is shown.</figcaption></figure><p id="51a853ac-979e-468d-9abb-69a7a6a94349" class="">Now, you have to evaluate how you well you knew the answer to that card and whether you got the answer right or not. Based on this evaluation, you must press one of the buttons presented at the bottom of the window. Here is how to decide which button to click:</p><ol id="456f97d1-ced4-4da7-af8b-30b3b3cfd7ed" class="numbered-list" start="1"><li>&quot;I got this question wrong&quot; OR &quot;I knew the answer but I couldn&#x27;t remember it&quot; → click &quot;<strong>Again</strong>&quot; or press 1</li></ol><ol id="9b014ae9-698f-4ad7-aae0-75a8cecce24b" class="numbered-list" start="2"><li>&quot;I answered this question correctly&quot; → click &quot;<strong>Good</strong>&quot; or press spacebar</li></ol><ol id="d35608c6-6b0a-4c46-9041-eb946935a076" class="numbered-list" start="3"><li>&quot;I answered this question correctly, but it took me considerable effort to do so&quot; → click &quot;<strong>Hard</strong>&quot; — This option will not appear on cards in the learning phase. More on that later.</li></ol><ol id="b702a740-51a3-4736-84c7-8834c767298e" class="numbered-list" start="4"><li><strong>NEVER</strong> <strong>PRESS</strong> &quot;<strong>Easy</strong>&quot; - I&#x27;ll explain below</li></ol><p id="13db4891-ad95-4c01-abe6-448c3517ac46" class="">Almost always, you should be pressing &quot;Good&quot; or &quot;Again&quot;. As the same card comes up again and again, pressing &quot;Good&quot; will increase the interval of the card (the amount of time it takes for that card to come back for you to review). Hitting &quot;Again&quot; will ensure that you see that card sooner and will see it more often than cards you know well. The reason you should never press easy is because the intervals will start to get very long very quickly, so you shouldn&#x27;t press it unless you know the question cold. But if that&#x27;s the case, that card probably isn&#x27;t very useful anyway.</p><p id="4786f1a4-b8df-44d6-b361-f5d4bf4e4453" class="">You can see what the new interval of the card would be if you pressed each button above the buttons. In the picture above, if I got the question correct, I would press &quot;Good&quot; and I would see the card 3 hours later.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2591b546-1aaf-4bbe-aa1d-74a7cecfee3d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">It&#x27;s important to be honest when evaluating your answer. If you click &quot;Good&quot; but don&#x27;t really understand a concept, you&#x27;ll see that card less often and you may not learn it well.</div></figure><p id="f0e6cae7-ba1e-4307-a8e9-aa329c7754ca" class="">Repeat this process for all of the cards in your deck, and you&#x27;ll see that the main screen shows that you have no new cards left, and nothing due either:</p><figure id="1a43fc9d-e26f-4162-b31e-cb1c01cac67b" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2018.png"><img style="width:528px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2018.png"/></a></figure><p id="cc87d4fc-2402-4c19-8be1-e1a6743178f8" class="">After around 3 hours (or in 20 minutes if you hit &quot;Again&quot; on some cards), you will see that cards in that deck will reappear, but this time they will count as cards that are &quot;<mark class="highlight-teal">Due</mark>&quot;:</p><figure id="7654ea22-1402-4cec-a490-4f2a24dac48f" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2019.png"><img style="width:528px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2019.png"/></a></figure><p id="19582b38-64c8-48f4-8428-aebc40943ace" class="">All you have to do now is complete the due cards whenever they appear, and add and learn new cards as you go through classes or studying.</p><h1 id="2e02d796-9934-43a0-a68f-e08c842fbd2f" class="">7. Explanation of Anki&#x27;s Algorithm</h1><p id="53944282-79d0-449d-9c33-c6bce7c55d63" class="">Remember when we set up the Deck Options earlier? This is how the program calculates when you&#x27;ll see new cards next. The &quot;Steps&quot; option that we set to &quot;20 180 1440 4320&quot; in particular is most relevant:</p><figure id="98d80ffb-bcc1-448e-8cfa-66d54d493d4d" class="image"><a href="Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"><img style="width:480px" src="Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png"/></a><figcaption>The Deck Options that were set up earlier. Notice the &quot;Steps&quot; correspond to the &quot;Again&quot; and &quot;Good&quot; intervals seen on the first card.</figcaption></figure><h2 id="657d4432-4f10-491f-b53a-bfd3199e4dc0" class="">Learning Phase</h2><p id="e890cbb6-da8e-4c69-a14f-2741435ef7b5" class="">The &quot;20 180 1440 4320&quot; that we set are called the &quot;<strong>learning steps</strong>&quot;. When you first start studying a card, it is considered to be in the &quot;<strong>learning phase</strong>&quot;. If you click &quot;Good&quot; the first time you see a card, you will see that card in 180 minutes (3 hours) — the card moves to the next learning step. For our settings, we would see the card in 3 hours, then 1 day, then 3 days. If you hit &quot;<strong>Good</strong>&quot; after that 3 day interval, since the &quot;4320&quot; was the last interval step we provided in the options, the card &quot;<strong>graduates</strong>&quot; and goes into the &quot;<strong>review phase</strong>&quot;. The next interval is set to be the graduating interval, which we set to 7 days in the options.</p><p id="a0eeb5a3-21be-4328-a81b-7a1318c36d2b" class="">Clicking &quot;<strong>Again</strong>&quot; while a card is in the learning phase moves the card back to the first step. In our case, you would see the card in 20 minutes, and then 3 hours, and so on.</p><p id="e11122ed-cbb2-4f28-a981-886714ab730d" class="">Clicking &quot;<strong>Easy</strong>&quot; at any time during the learning phase immedaitely turns that card into a review card (skipping all remaining learning steps), and its interval is set to the &quot;Easy interval&quot; which we set to 6 days.</p><h2 id="2ee30c74-5a98-4ae7-bca6-e28c05213501" class="">Review Phase</h2><p id="7a24517e-6098-4ea9-9fec-5b9012e73979" class="">Once a card goes through all of the learning steps and graduates, the Anki interval algorithm takes over. When you see that card after 7 days and hit &quot;<strong>Good</strong>&quot;, Anki multiplies that 7 day interval by the &quot;<strong>Ease</strong>&quot; which we set to start at 250% to calculate the new interval: 7 days * 2.5 = 17.5 days. So you&#x27;ll see that card after 17 days.</p><p id="629d26de-dc5e-4304-95fe-4351d34b70f0" class="">Clicking &quot;<strong>Hard</strong>&quot; means you still answered the card correctly, so that card&#x27;s interval increases. The current interval is mulitplied by 1.2 to calculate the next interval. For the first card, this would be 7 days * 1.2 = 8.4 days. Additionally, that card&#x27;s <strong>ease</strong> is decreased by 15%. That means this card&#x27;s ease is now 235%, meaning you will see the card more frequently (e.g. next time you see the card and hit &quot;Good&quot;, the next interval will be shorter than it would have been if the ease remained at 250%).</p><p id="8a94d266-7892-47c3-8d75-63260c314b8f" class="">Clicking &quot;<strong>Easy</strong>&quot; (which should NOT be happening a lot for the reasons stated above) means the current interval is multiplied by the card&#x27;s ease * easy bonus (which we set to 130%). For this card, that would be 7 days * 2.5 * 1.3 = 22.75 days. Because the card&#x27;s ease increased, it&#x27;s intervals will increase at a faster rate, so you will study this card far less than cards you hit Good or Hard on.</p><p id="b69348f0-3ad1-442a-b96c-6d2bfb65c98f" class="">Clicking &quot;<strong>Again</strong>&quot; on a card in the review phase means that card has &quot;<strong>lapsed</strong>&quot; and the card enters the &quot;<strong>relearning phase</strong>&quot;. The card&#x27;s ease is decreased by 20%, meaning you will see this card more often in the future. The card&#x27;s next interval is calculated as current interval * New interval, which we set to be 40%. For this card, that would be 7 days * 0.4 = 2.8 days. Before this interval is used, Anki will show the card again to relearn, according to the steps in the Lapses section of the deck options. We set this to &quot;20 180&quot;, meaning you will see the card 20 minutes later, and then 3 hours later before seeing the card about 2.8 days later (when it is back in the review phase).</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="196d3889-89b8-49d5-b865-d7ea9a78fba4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The calculated intervals in the review phase have a bit of &quot;fuzz&quot; built into them. For example, instead of seeing the card exactly 17.5 days later, you might see it in 16 days, or in 19 days. This prevents cards that were started together from always coming up on the same day each time you review.</div></figure></div></article></body></html>
