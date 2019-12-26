@@ -4,7 +4,7 @@
         <h1 class="title-text"><a href="/">DURGA KULLAKANDA</a></h1>
         <nav class="menu-items">
             {% for item in site.data.navigation %}
-                <a href="{{ item.url }}">{{ item.title }}</a>
+                <a href="{{ item.title }}">{{ item.title }}</a>
                 {% unless forloop.last %}<span id="separator">|</span>{% endunless %}
             {% endfor %}
         </nav>
