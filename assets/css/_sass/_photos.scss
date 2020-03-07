@@ -1,13 +1,16 @@
 .page-title {
   padding: 0px 10px 10px;
+  display: inline-block;
+  color: red;
 }
-.misc-content {
-  max-width: 70%;
+.photos-content {
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .masonry {

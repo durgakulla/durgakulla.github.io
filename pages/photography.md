@@ -1,6 +1,5 @@
 ---
-layout: misc
-title: Photography
+layout: photos
 
 masonry_filenames:
 - alsomudlick
