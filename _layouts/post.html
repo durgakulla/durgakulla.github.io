@@ -35,6 +35,8 @@ layout: default
     {{ content }}
   </article>
 
+
+  {% if site.data.settings.post_sharing_on %}
   <div class="post-share">
     <div class="post-date">{{ site.data.settings.sharing_button_prompt }}</div>
     <div class="sharing-icons">
@@ -43,7 +45,9 @@ layout: default
       <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
     </div>
   </div>
+  {% endif %}
 
+  {% if site.data.settings.related_posts_on %}
   <div class="related">
     <h2>{{ site.data.settings.related_posts }}</h2>
     {% assign listed_posts_urls = page.url | split: ' ' %}
@@ -73,6 +77,7 @@ layout: default
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
 
   {% if site.data.settings.disqus.comments %}
     {% include disqus.html %}
