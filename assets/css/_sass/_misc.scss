@@ -1,8 +1,32 @@
+.outer-div-profile
+{
+     height: 200px;
+     overflow: hidden;
+     margin-bottom: 10px;
+     display: flex;
+}
+.inner-div-profile
+{
+     height: 100%;
+     width: 100%;
+     background-size: cover;
+     background-position: center;
+     transition: transform .5s ease;
+     background-image: url('/assets/img/durga.jpg');
+}
+.inner-div-profile:hover
+{
+     transform: scale(1);
+     @media screen and (min-width: $tablet-width) {
+      transform: scale(1.05);
+     }
+}
+
 .page-title {
   padding: 0px 10px 10px;
 }
 .misc-content {
-  max-width: 90%;
+  max-width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;

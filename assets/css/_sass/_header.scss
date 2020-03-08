@@ -6,6 +6,7 @@
   box-shadow: 0 5px 6px -6px #bbb;
   z-index: 100;
 }
+
 @media (max-width: $container-width) {
   .site-header {
       min-height: 56px;
@@ -31,10 +32,10 @@
 .menu-list {
   line-height: $header-thickness;
   float: right;
+  font-weight: 700;
 }
 .menu-link {
   padding: 5px 10px;
-  font-weight: 700;
 }
 
 .logo-image{

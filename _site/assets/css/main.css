@@ -37,7 +37,8 @@ h4, h5, h6 {
 
 /* Body */
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff; }
 
 body img {
   align: middle;
@@ -113,7 +114,8 @@ th, td {
 .container {
   width: 900px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-color: #FFF; }
 
 .container a {
   text-decoration: underline; }
@@ -138,6 +140,13 @@ th, td {
     margin: auto;
     display: block;
     width: 95vw; } }
+.home-wrapper {
+  width: 80%;
+  margin: auto; }
+
+.featured-pic {
+  align: left; }
+
 .featured-posts {
   height: 150px;
   margin: 5px 10px 10px;
@@ -146,9 +155,9 @@ th, td {
   background-size: cover;
   position: relative;
   transition: filter .1s ease-in-out;
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
   /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   /* FF 35+ */ }
 
 .featured-posts:hover {
@@ -204,11 +213,31 @@ th, td {
 .pagination-active:hover {
   background-color: #e0e0e0; }
 
+.outer-div-profile {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex; }
+
+.inner-div-profile {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s ease;
+  background-image: url("/assets/img/durga.jpg"); }
+
+.inner-div-profile:hover {
+  transform: scale(1); }
+  @media screen and (min-width: 600px) {
+    .inner-div-profile:hover {
+      transform: scale(1.05); } }
+
 .page-title {
   padding: 0px 10px 10px; }
 
 .misc-content {
-  max-width: 90%;
+  max-width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -465,11 +494,11 @@ th, td {
 
 .menu-list {
   line-height: 56px;
-  float: right; }
+  float: right;
+  font-weight: 700; }
 
 .menu-link {
-  padding: 5px 10px;
-  font-weight: 700; }
+  padding: 5px 10px; }
 
 .logo-image {
   width: 46px;

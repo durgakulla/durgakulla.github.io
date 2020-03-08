@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Text Formatting"
+title: "Movie List"
 author: "Paul Le"
-categories: sample
+categories: blog
 tags: [sample]
 image: arctic-1.jpg
 show-image: true

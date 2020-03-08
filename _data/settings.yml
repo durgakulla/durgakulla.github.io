@@ -15,7 +15,6 @@ google-ID: 'UA-159988954-1'
 menu:
 - {name: 'Photography', folder: 'pages', file: 'photography'}
 - {name: 'About', folder: 'pages', file: 'about'}
-- {name: 'Contact', folder: 'pages', file: 'contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
