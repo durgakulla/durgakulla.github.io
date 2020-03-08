@@ -14,13 +14,6 @@
   background-size: cover;
   position: relative;
   transition: filter .1s ease-in-out;
-  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(0%); /* FF 35+ */
-}
-
-.featured-posts:hover {
-  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(0%); /* FF 35+ */
 }
 
 .featured-posts h2 {

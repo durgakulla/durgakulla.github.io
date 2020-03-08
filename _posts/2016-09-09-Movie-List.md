@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Movie List"
-author: "Paul Le"
+author: "Durga Kullakanda"
 categories: blog
 tags: [sample]
-image: arctic-1.jpg
+image: movie2.jpg
 show-image: true
 ---
 

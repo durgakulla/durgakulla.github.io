@@ -24,7 +24,7 @@
 			<item>
 				<title>Movie List</title>
 				
-					<dc:creator>Paul Le</dc:creator>
+					<dc:creator>Durga Kullakanda</dc:creator>
 				
 				
 					<description>&lt;h1 id=&quot;markdown-support&quot;&gt;Markdown Support&lt;/h1&gt;
@@ -32,22 +32,8 @@
 </description>
 				
 				<pubDate>Fri, 09 Sep 2016 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/blog/text-formatting.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/text-formatting.html</guid>
-			</item>
-		
-			<item>
-				<title>About the Author</title>
-				
-					<dc:creator>Paul Le</dc:creator>
-				
-				
-					<description>&lt;p&gt;Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out &lt;a href=&quot;https://www.lenpaul.com/&quot;&gt;my personal website&lt;/a&gt; for more information on my other projects (including more Jekyll themes!), as well as some of my writing.&lt;/p&gt;
-</description>
-				
-				<pubDate>Mon, 04 Apr 2016 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/facts/about-the-author.html</link>
-				<guid isPermaLink="true">http://localhost:4000/facts/about-the-author.html</guid>
+				<link>http://localhost:4000/blog/Movie-List.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/Movie-List.html</guid>
 			</item>
 		
 	</channel>
