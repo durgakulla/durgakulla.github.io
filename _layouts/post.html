@@ -3,10 +3,12 @@ layout: default
 ---
 
 <div class="page-content">
+
   <h1>
     {{ page.title }}
   </h1>
 
+  {% if site.data.settings.show_date %}
   <span class="post-date">
     {{ site.data.settings.post_date_prefix }}
     {% assign d = page.date | date: "%-d"  %}
@@ -17,15 +19,10 @@ layout: default
       {% when '3' or '23' %}{{ d }}rd
       {% else %}{{ d }}th{% endcase %},
     {{ page.date | date: "%Y" }}
-    by
-    {% if page.author %}
-      {{ page.author }}
-    {% else %}
-      {{ site.author }}
-    {% endif %}
   </span>
+  {% endif %}
 
-  {% if page.image %}
+  {% if page.image and page.show-image == true %}
     <div class="featured-image">
       <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
     </div>

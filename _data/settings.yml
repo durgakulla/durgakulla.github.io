@@ -1,7 +1,8 @@
 #My variables
 site_brand: 'Durga Kullakanda'
-post_sharing_on: false
+post_sharing_on: true
 related_posts_on: false
+show_date: false
 
 # Change 'comments' to true for Disqus comments
 disqus:
@@ -12,14 +13,14 @@ disqus:
 google-ID: 'UA-159988954-1'
 
 menu:
-- {name: 'Anki', folder: 'pages', file: 'anki'}
-- {name: 'About', folder: 'pages', file: 'about'}
 - {name: 'Photography', folder: 'pages', file: 'photography'}
+- {name: 'About', folder: 'pages', file: 'about'}
 - {name: 'Contact', folder: 'pages', file: 'contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'instagram', link: 'https://instagram.com/kullakanda'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/durgakullakanda/'}
 - {icon: 'envelope', link: 'mailto:durga.kulla@gmail.com'}
 # - {icon: 'rss-square', link: 'rss-feed.xml'}
 

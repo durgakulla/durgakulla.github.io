@@ -1,4 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-07T13:13:47-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Durga K.</title><subtitle></subtitle><author><name>Durga Kullakanda</name></author><entry><title type="html">Welcome to Millennial!</title><link href="http://localhost:4000/documentation/welcome-to-millennial.html" rel="alternate" type="text/html" title="Welcome to Millennial!" /><published>2017-01-01T00:00:00-05:00</published><updated>2017-01-01T00:00:00-05:00</updated><id>http://localhost:4000/documentation/welcome-to-millennial</id><content type="html" xml:base="http://localhost:4000/documentation/welcome-to-millennial.html">&lt;p&gt;Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-07T19:40:00-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Durga K.</title><subtitle></subtitle><author><name>Durga Kullakanda</name></author><entry><title type="html">Anki Guide for Medical Students</title><link href="http://localhost:4000/documentation/anki.html" rel="alternate" type="text/html" title="Anki Guide for Medical Students" /><published>2020-03-07T00:00:00-05:00</published><updated>2020-03-07T00:00:00-05:00</updated><id>http://localhost:4000/documentation/anki</id><content type="html" xml:base="http://localhost:4000/documentation/anki.html">&lt;h1 id=&quot;what-is-this-guide&quot;&gt;What Is This Guide?&lt;/h1&gt;
+
+&lt;p&gt;This guide is intended for medical students who are wanting to learn about &lt;strong&gt;what Anki is&lt;/strong&gt; and &lt;strong&gt;how to use it in medical school&lt;/strong&gt;. The Anki software is intimidating when first starting to use it, so this guide will teach the basics of navigating the program, making flashcards to study, and how to get the most benefit from studying those flashcards. Later sections will also get into the finer details of the program, which will be useful to know as you get familiar with Anki and would like to tweak things to best fit your needs.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-what-is-anki&quot;&gt;1. What is Anki?&lt;/h1&gt;
+
+&lt;p&gt;Anki is a highly customizable &lt;strong&gt;flashcard&lt;/strong&gt; program. If you’ve ever used web-based &lt;a href=&quot;http://quizlet.com&quot;&gt;&lt;strong&gt;Quizlet&lt;/strong&gt;&lt;/a&gt; flashcards, you’ll be familiar with the basic concept: you’re presented with one side of the flashcard, and then you can reveal the other side to test yourself on pretty much anything. Unfortunately, the high customizability of Anki makes it rather difficult to understand the ins and outs of how the program works. This &lt;strong&gt;comprehensive&lt;/strong&gt; &lt;strong&gt;guide&lt;/strong&gt; will teach you everything you need to know to &lt;strong&gt;use Anki in the most efficient way possible&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Quizlet flashcard example&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Anki flashcard example&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%201.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%201.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;2-how-is-anki-different-from-quizlet-or-paper-flashcards&quot;&gt;2. How is Anki different from Quizlet or paper flashcards?&lt;/h1&gt;
+
+&lt;p&gt;It’s hard to see on the surface how Anki is different from old-fashioned paper flashcards or applications like Quizlet. Truth be told, Anki’s user interface looks quite ugly when you first start using it. Anki’s power lies in its &lt;em&gt;implementation&lt;/em&gt; of two key concepts for memorization: &lt;strong&gt;active recall&lt;/strong&gt; and &lt;strong&gt;spaced repetition&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Active recall:&lt;/strong&gt; a method of learning in which one actively tests their memory by answering questions or recalling information, rather than passively reviewing by re-reading or highlighting text. Flashcards in general leverage the principle of active recall, and the flexibility when making Anki’s flashcards makes it a broadly useful tool in medical school. Anki cards can look like traditional front/back flashcards, fill-in-the-blank “cloze” style flashcards, or even images with labels hidden (e.g. for anatomy). Rather than looking at PowerPoint slides over and over again, or re-reading textbooks, Anki cards can help you use active learning in various ways.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spaced repetition:&lt;/strong&gt; a learning technique where new flashcards are seen more frequently than older ones. The time interval, which describes the amount of time before you see the same flashcard again, increases each time that flashcard is answered correctly. In Anki, an incorrectly answered flashcard will have its interval reduced so that you will see that card more frequently (since you presumably forgot the information on that specific flashcard).&lt;/p&gt;
+
+&lt;p&gt;When you reveal the answer to a card, you are presented with buttons asking you to evaulate how well you knew that card. Based on your answer, the interval of that specific card is adjusted accordingly (the new interval is shown above each button). These principles allow you to &lt;strong&gt;study only as much as necessary&lt;/strong&gt; while &lt;strong&gt;improving your retention of material&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%202.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%202.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each card has a time interval associated with it. Cards you know well will increase in interval each time, giving you time to focus on newer or harder information.&lt;/p&gt;
+
+&lt;p&gt;Of course, these principles can generally be used when studying from traditional flashcards or Quizlet. Anki allows us to automate the process so we can focus on studying information, and only studying that information when we have to. In addition, Anki users can share flashcard “decks”, making collaboration easy. For medical school in particular, many Anki decks exist online which cover courses like anatomy, material from other products/resources medical students use, or even material for the USMLE Step 1.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-installing-anki-and-add-ons&quot;&gt;3. Installing Anki and Add-ons&lt;/h1&gt;
+
+&lt;h2 id=&quot;installing-anki&quot;&gt;Installing Anki&lt;/h2&gt;
+
+&lt;p&gt;Download and install the latest version of the Anki software using the instructions found on the &lt;a href=&quot;https://apps.ankiweb.net/&quot;&gt;&lt;strong&gt;Anki website&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This guide was written with &lt;strong&gt;Anki version 2.1&lt;/strong&gt; and version &lt;strong&gt;2.1 add-ons&lt;/strong&gt;, but the basic principles will never change. In the future, add-on support might vary by version. It is not recommended to use version 2.0 when following this guide.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-add-ons&quot;&gt;Installing add-ons&lt;/h2&gt;
+
+&lt;p&gt;Add-ons are additional features users have developed which increase the functionality of the base Anki program.&lt;/p&gt;
+
+&lt;p&gt;To install add-ons: open Anki → open ‘Tools’ menu → Add-ons → Get Add-ons… → type in the code from the Add-on links below&lt;/p&gt;
+
+&lt;p&gt;When starting, you’ll have to take my word that the following add-ons are &lt;strong&gt;essential&lt;/strong&gt; to have a good Anki experience:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1835859645&quot;&gt;Hierarchical Tags&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1374772155&quot;&gt;Image Occlusion Enhanced&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1102281552&quot;&gt;Special Fields&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/516643804&quot;&gt;Frozen Fields&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are some additional (&lt;strong&gt;optional&lt;/strong&gt;) add-ons that change the apperance of Anki or provide extra statistics:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1496166067&quot;&gt;Night Mode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/glutanimate/review-heatmap&quot;&gt;Review Heatmap&lt;/a&gt; (scroll down to Manual installation and follow the instructions for Anki 2.1)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1556734708&quot;&gt;More Decks Stats and Time Left&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/738807903&quot;&gt;More Overview Stats 2.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1828603731&quot;&gt;Stats Overview Pie Graph&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/923360400&quot;&gt;True Retention by Card Maturity&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;4-making-an-anki-deck&quot;&gt;4. Making an Anki Deck&lt;/h1&gt;
+
+&lt;p&gt;Now that you’ve installing Anki and the add-ons listed above, Anki should look like this when you start the program (the following screenshots are taken with the “Night Mode” add-on, as well as all of the other optional add-ons mentioned above):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%203.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%203.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s say we want to make some cards for a lecture on childhood viral infections. Here is an example of a powerpoint slide we want to make flashcards for:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%204.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%204.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Anki, click on the “Add” button. In this window, change the “Type” to “Cloze”. This allows us to make fill-in-the-blank style cards, but we can also make cards in a question/answer format. For this reason, I make cards exlusively in the cloze type so that I don’t have to switch back and forth and use multiple card types.&lt;/p&gt;
+
+&lt;p&gt;We need to make a flashcard deck for these new cards to go into. Click on the Deck button (which should be set to Default when first starting out), click on the “Add” button, and give this deck a name. For this example, I’ve named my deck “Week 1::Childhood viral infections” (we’ll see what the “::” does soon). The Add window should now look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%205.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%205.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we type out our question and answer in the “Text” field. Then, highlight the answer you’ve written out, and press “command/ctrl+shift+c”. The “cloze” syntax that is added means that the text within the brackets is the “blank” part of the fill-in-the-blank when we study these cards. In this case, I am blanking out the answer to a question:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%206.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%206.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the text that you want hidden when you first see the card. In this case, the answer to the question will be hidden.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%207.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%207.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pressing “command/ctrl+shift+c” adds the cloze “{{c1:: }}” syntax. The text in the middle will be hidden when studying the card.&lt;/p&gt;
+
+&lt;p&gt;This part is optional, but I like to add a screenshot of wherever I got the information for the card in the card itself. To do this, just add the screenshot image file into the “Extra” field:&lt;/p&gt;
+
+&lt;p&gt;On MacOS, press “command+control+Shift+4” to take a screenshot and copy it directly to the clipboard. Now you can quickly paste (“command+v”) the screenshot into the “Extra” field. I make the  screenshot shortcut easier to press by remapping it to “command+shift+1”. You can set this up by going to System Preferences → Keyboard → “Shortcuts” tab → Screenshots → change key combination for “Copy picture of selected area to clipboard” to “command+shift+1”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%208.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%208.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can add tags to cards you make, but I find that this gets tedious especially if you don’t keep up with cards after the exam they’re covered on, so I don’t tag cards I don’t intend to study beyond that exam. Instead, I make a separate deck for each lecture and organize them as “sub-decks”, which I will soon explain. Press “cmd/ctrl + enter” or the “Add” button to add the card to the deck you just created. Repeat this process to add as many cards as needed to this deck. You can also add more cards later but going into this Add window and making sure the “Deck” is set to the deck you want to add cards to.&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at the main Anki window now:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%209.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%209.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember how I named my deck “Week 1::Childhood viral infections”? The two colons “::” indicate that you are making a deck that falls under a parent deck. These decks are called “sub-decks”. In the image above, we can see the main “Week 1” deck, with the subdeck which would contain all the cards from the lecture “Childhood viral infections”. You can organize your decks and subdecks however you find convenient, but it is always good to have one parent deck which contains all of the lecture subdecks you need to study for a particular exam, for example. This way, when you study the cards, you can get an assortment of questions from all of your lectures instead of studying just one lecture at a time.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of one of my decks. I organize decks by the following deck naming convention - “module::testnumber::weeknumber::lecturename”. This way, I can click on the Test 1 parent deck to study all of the cards for Test 1, or I can study from the Week 1 deck to study only that material:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2010.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2010.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use whatever organization works for you! Instead of re-naming the decks, you can move decks around by clicking and dragging too.&lt;/p&gt;
+
+&lt;h1 id=&quot;5-setting-up-deck-options&quot;&gt;5. Setting up Deck Options&lt;/h1&gt;
+
+&lt;p&gt;You have now created a deck (or several) covering material you want to memorize. Before you study your cards, we have to make sure Anki’s algorithm for how often you see cards is optimized for your situation. For now, you’ll have to take a leap of faith and use the following settings when studying your cards. Read the section on understanding and adjusting settings for in-depth explanations of what all of this means.&lt;/p&gt;
+
+&lt;p&gt;First, go into Anki preferences (“Anki” in the menu bar → Preferences). Make sure the “Experimental V2 scheduler” is checked, and accept any warnings the program displays. Your preferences window should look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2011.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2011.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click on the cogwheel/settings icon next to any of your decks, and click “Options”. Keep the “Options group” set to “Default”. This way, these settings will apply to any deck you create in the future. Copy these settings exactly (leave the General and Description tabs the same), and then click “OK”:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2012.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2013.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2013.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2014.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2014.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you’re ready to study. Click on a parent deck or subdeck (depending on whether you want to study multiple decks at a time, or a particular deck/subset of decks) and click “study Now”.&lt;/p&gt;
+
+&lt;h1 id=&quot;6-studying-anki-decks&quot;&gt;6. Studying Anki Decks&lt;/h1&gt;
+
+&lt;p&gt;Let’s say I’ve just created a deck of 28 new cards for a lecture I had named “Introduction to Virology”:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2015.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2015.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The “Introduction to Virology” deck shows 28 new cards since I have not studied any yet.&lt;/p&gt;
+
+&lt;p&gt;Because I have a full set of cards for that lecture, I’d like to start studying it. As stated above, to study this “Introduction to Virology” deck, I would click on it and then click “Study Now”. The first card in that deck will pop up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2016.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2016.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A card I’ve made in question/answer format. The answer was “clozed” out when I made the card, so it is initially hidden.&lt;/p&gt;
+
+&lt;p&gt;When you see the front of a card like this, come up with the answer to the question if you can. Once you’ve done that (or if you can’t come up with anything), press the spacebar or click on “Show Answer” to reveal the answer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2017.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2017.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The answer to the card from the previous picture. Note that both the typed out answer and the screenshot I add to the “Extra” section is shown.&lt;/p&gt;
+
+&lt;p&gt;Now, you have to evaluate how you well you knew the answer to that card and whether you got the answer right or not. Based on this evaluation, you must press one of the buttons presented at the bottom of the window. Here is how to decide which button to click:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;“I got this question wrong” OR “I knew the answer but I couldn’t remember it” → click “&lt;strong&gt;Again&lt;/strong&gt;” or press 1&lt;/li&gt;
+  &lt;li&gt;“I answered this question correctly” → click “&lt;strong&gt;Good&lt;/strong&gt;” or press spacebar&lt;/li&gt;
+  &lt;li&gt;“I answered this question correctly, but it took me considerable effort to do so” → click “&lt;strong&gt;Hard&lt;/strong&gt;” — This option will not appear on cards in the learning phase. More on that later.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NEVER&lt;/strong&gt; &lt;strong&gt;PRESS&lt;/strong&gt; “&lt;strong&gt;Easy&lt;/strong&gt;” - I’ll explain below&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Almost always, you should be pressing “Good” or “Again”. As the same card comes up again and again, pressing “Good” will increase the interval of the card (the amount of time it takes for that card to come back for you to review). Hitting “Again” will ensure that you see that card sooner and will see it more often than cards you know well. The reason you should never press easy is because the intervals will start to get very long very quickly, so you shouldn’t press it unless you know the question cold. But if that’s the case, that card probably isn’t very useful anyway.&lt;/p&gt;
+
+&lt;p&gt;You can see what the new interval of the card would be if you pressed each button above the buttons. In the picture above, if I got the question correct, I would press “Good” and I would see the card 3 hours later.&lt;/p&gt;
+
+&lt;p&gt;It’s important to be honest when evaluating your answer. If you click “Good” but don’t really understand a concept, you’ll see that card less often and you may not learn it well.&lt;/p&gt;
+
+&lt;p&gt;Repeat this process for all of the cards in your deck, and you’ll see that the main screen shows that you have no new cards left, and nothing due either:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2018.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2018.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After around 3 hours (or in 20 minutes if you hit “Again” on some cards), you will see that cards in that deck will reappear, but this time they will count as cards that are “Due”:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2019.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2019.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All you have to do now is complete the due cards whenever they appear, and add and learn new cards as you go through classes or studying.&lt;/p&gt;
+
+&lt;h1 id=&quot;7-explanation-of-ankis-algorithm&quot;&gt;7. Explanation of Anki’s Algorithm&lt;/h1&gt;
+
+&lt;p&gt;Remember when we set up the Deck Options earlier? This is how the program calculates when you’ll see new cards next. The “Steps” option that we set to “20 180 1440 4320” in particular is most relevant:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/anki/Untitled%2012.png&quot; alt=&quot;Anki%20Guide%20for%20Medical%20Students/Untitled%2012.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Deck Options that were set up earlier. Notice the “Steps” correspond to the “Again” and “Good” intervals seen on the first card.&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-phase&quot;&gt;Learning Phase&lt;/h2&gt;
+
+&lt;p&gt;The “20 180 1440 4320” that we set are called the “&lt;strong&gt;learning steps&lt;/strong&gt;”. When you first start studying a card, it is considered to be in the “&lt;strong&gt;learning phase&lt;/strong&gt;”. If you click “Good” the first time you see a card, you will see that card in 180 minutes (3 hours) — the card moves to the next learning step. For our settings, we would see the card in 3 hours, then 1 day, then 3 days. If you hit “&lt;strong&gt;Good&lt;/strong&gt;” after that 3 day interval, since the “4320” was the last interval step we provided in the options, the card “&lt;strong&gt;graduates&lt;/strong&gt;” and goes into the “&lt;strong&gt;review phase&lt;/strong&gt;”. The next interval is set to be the graduating interval, which we set to 7 days in the options.&lt;/p&gt;
+
+&lt;p&gt;Clicking “&lt;strong&gt;Again&lt;/strong&gt;” while a card is in the learning phase moves the card back to the first step. In our case, you would see the card in 20 minutes, and then 3 hours, and so on.&lt;/p&gt;
+
+&lt;p&gt;Clicking “&lt;strong&gt;Easy&lt;/strong&gt;” at any time during the learning phase immedaitely turns that card into a review card (skipping all remaining learning steps), and its interval is set to the “Easy interval” which we set to 6 days.&lt;/p&gt;
+
+&lt;h2 id=&quot;review-phase&quot;&gt;Review Phase&lt;/h2&gt;
+
+&lt;p&gt;Once a card goes through all of the learning steps and graduates, the Anki interval algorithm takes over. When you see that card after 7 days and hit “&lt;strong&gt;Good&lt;/strong&gt;”, Anki multiplies that 7 day interval by the “&lt;strong&gt;Ease&lt;/strong&gt;” which we set to start at 250% to calculate the new interval: 7 days * 2.5 = 17.5 days. So you’ll see that card after 17 days.&lt;/p&gt;
+
+&lt;p&gt;Clicking “&lt;strong&gt;Hard&lt;/strong&gt;” means you still answered the card correctly, so that card’s interval increases. The current interval is mulitplied by 1.2 to calculate the next interval. For the first card, this would be 7 days * 1.2 = 8.4 days. Additionally, that card’s &lt;strong&gt;ease&lt;/strong&gt; is decreased by 15%. That means this card’s ease is now 235%, meaning you will see the card more frequently (e.g. next time you see the card and hit “Good”, the next interval will be shorter than it would have been if the ease remained at 250%).&lt;/p&gt;
+
+&lt;p&gt;Clicking “&lt;strong&gt;Easy&lt;/strong&gt;” (which should NOT be happening a lot for the reasons stated above) means the current interval is multiplied by the card’s ease * easy bonus (which we set to 130%). For this card, that would be 7 days * 2.5 * 1.3 = 22.75 days. Because the card’s ease increased, it’s intervals will increase at a faster rate, so you will study this card far less than cards you hit Good or Hard on.&lt;/p&gt;
+
+&lt;p&gt;Clicking “&lt;strong&gt;Again&lt;/strong&gt;” on a card in the review phase means that card has “&lt;strong&gt;lapsed&lt;/strong&gt;” and the card enters the “&lt;strong&gt;relearning phase&lt;/strong&gt;”. The card’s ease is decreased by 20%, meaning you will see this card more often in the future. The card’s next interval is calculated as current interval * New interval, which we set to be 40%. For this card, that would be 7 days * 0.4 = 2.8 days. Before this interval is used, Anki will show the card again to relearn, according to the steps in the Lapses section of the deck options. We set this to “20 180”, meaning you will see the card 20 minutes later, and then 3 hours later before seeing the card about 2.8 days later (when it is back in the review phase).&lt;/p&gt;
+
+&lt;p&gt;The calculated intervals in the review phase have a bit of “fuzz” built into them. For example, instead of seeing the card exactly 17.5 days later, you might see it in 16 days, or in 19 days. This prevents cards that were started together from always coming up on the same day each time you review.&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="documentation" /><category term="sample" /><summary type="html">What Is This Guide?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/book.jpg" /></entry><entry><title type="html">Welcome to Millennial!</title><link href="http://localhost:4000/documentation/welcome-to-millennial.html" rel="alternate" type="text/html" title="Welcome to Millennial!" /><published>2017-01-01T00:00:00-05:00</published><updated>2017-01-01T00:00:00-05:00</updated><id>http://localhost:4000/documentation/welcome-to-millennial</id><content type="html" xml:base="http://localhost:4000/documentation/welcome-to-millennial.html">&lt;p&gt;Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
 

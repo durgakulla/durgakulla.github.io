@@ -5,18 +5,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: filter .1s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+.featured-posts:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
 }
 
 .featured-posts h2 {
-  bottom: 0;
+  bottom: 10%;
   margin: 0;
-  padding: 10px;
+  padding-left: 20px;
   position: absolute;
 }
 .featured-posts h2 span {
    display: inline-block;
    color: white;
-   font: bold 24px/45px Helvetica, Sans-Serif;
+   font: bold 24px/45px 'Open Sans', Sans-Serif;
    letter-spacing: -1px;
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
