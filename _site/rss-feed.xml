@@ -7,33 +7,46 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Anki Guide for Medical Students</title>
-				
-					<dc:creator>Paul Le</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;what-is-this-guide&quot;&gt;What Is This Guide?&lt;/h1&gt;
-
-</description>
-				
-				<pubDate>Sat, 07 Mar 2020 00:00:00 -0500</pubDate>
-				<link>http://localhost:4000/projects/anki.html</link>
-				<guid isPermaLink="true">http://localhost:4000/projects/anki.html</guid>
-			</item>
-		
-			<item>
-				<title>Movie List</title>
+				<title>Natural Language Processing</title>
 				
 					<dc:creator>Durga Kullakanda</dc:creator>
 				
 				
-					<description>&lt;h1 id=&quot;markdown-support&quot;&gt;Markdown Support&lt;/h1&gt;
+					<description>&lt;h2 id=&quot;new-project&quot;&gt;New project!&lt;/h2&gt;
+</description>
+				
+				<pubDate>Sun, 02 Aug 2020 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/projects/nlp.html</link>
+				<guid isPermaLink="true">http://localhost:4000/projects/nlp.html</guid>
+			</item>
+		
+			<item>
+				<title>Creating a Multiplayer Game with node.js and socket.io</title>
+				
+					<dc:creator>Durga Kullakanda</dc:creator>
+				
+				
+					<description>&lt;h2 id=&quot;new-project&quot;&gt;New project!&lt;/h2&gt;
+</description>
+				
+				<pubDate>Mon, 04 May 2020 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/projects/rickrobot.html</link>
+				<guid isPermaLink="true">http://localhost:4000/projects/rickrobot.html</guid>
+			</item>
+		
+			<item>
+				<title>Anki Guide for Medical Students</title>
+				
+					<dc:creator>Durga Kullakanda</dc:creator>
+				
+				
+					<description>&lt;p&gt;This guide is intended for medical students who are wanting to learn about &lt;strong&gt;what Anki is&lt;/strong&gt; and &lt;strong&gt;how to use it in medical school&lt;/strong&gt;. The Anki software is intimidating when first starting to use it, so this guide will teach the basics of navigating the program, making flashcards to study, and how to get the most benefit from studying those flashcards. Later sections will also get into the finer details of the program, which will be useful to know as you get familiar with Anki and would like to tweak things to best fit your needs.&lt;/p&gt;
 
 </description>
 				
-				<pubDate>Fri, 09 Sep 2016 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/blog/Movie-List.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/Movie-List.html</guid>
+				<pubDate>Sat, 07 Mar 2020 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/projects/anki.html</link>
+				<guid isPermaLink="true">http://localhost:4000/projects/anki.html</guid>
 			</item>
 		
 	</channel>

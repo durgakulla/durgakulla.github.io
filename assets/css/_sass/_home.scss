@@ -7,8 +7,8 @@
 }
 
 .featured-posts {
-  height: 150px;
-  margin: 10px 60px;
+  height: 200px;
+  margin: 0px 60px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,6 +34,11 @@
 .featured-posts span a {
   color: white;
 }
+
+.featured-posts span a:hover img{
+            opacity:0.2;
+        }
+
 .featured-posts h1 {
   margin: 10px;
 }
