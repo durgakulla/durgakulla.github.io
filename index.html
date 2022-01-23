@@ -29,6 +29,13 @@
             .btn-upper{
                 text-transform: uppercase;
             }
+            .badge{
+                height: 35px;
+                width: 35px;
+            }
+            .enter{
+                width: 60px;
+            }
         </style>
         </style>
         <script type="text/javascript"> 
@@ -211,40 +218,42 @@
             </div>
             <div class="row">
                 <div class="col-md">
-                    <button id= "kbq" class="badge bg-secondary">Q</button>
-                    <button id= "kbw" class="badge bg-secondary">W</button>
-                    <button id= "kbe" class="badge bg-secondary">E</button>
-                    <button id= "kbr" class="badge bg-secondary">R</button>
-                    <button id= "kbt" class="badge bg-secondary">T</button>
-                    <button id= "kby" class="badge bg-secondary">Y</button>
-                    <button id= "kbu" class="badge bg-secondary">U</button>
-                    <button id= "kbi" class="badge bg-secondary">I</button>
-                    <button id= "kbo" class="badge bg-secondary">O</button>
-                    <button id= "kbp" class="badge bg-secondary">P</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'q'}))" id= "kbq" class="badge bg-secondary">Q</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'w'}))" id= "kbw" class="badge bg-secondary">W</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'e'}))" id= "kbe" class="badge bg-secondary">E</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'r'}))" id= "kbr" class="badge bg-secondary">R</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 't'}))" id= "kbt" class="badge bg-secondary">T</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'y'}))" id= "kby" class="badge bg-secondary">Y</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'u'}))" id= "kbu" class="badge bg-secondary">U</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'i'}))" id= "kbi" class="badge bg-secondary">I</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'o'}))" id= "kbo" class="badge bg-secondary">O</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'p'}))" id= "kbp" class="badge bg-secondary">P</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <button id= "kba" class="badge bg-secondary">A</button>
-                    <button id= "kbs" class="badge bg-secondary">S</button>
-                    <button id= "kbd" class="badge bg-secondary">D</button>
-                    <button id= "kbf" class="badge bg-secondary">F</button>
-                    <button id= "kbg" class="badge bg-secondary">G</button>
-                    <button id= "kbh" class="badge bg-secondary">H</button>
-                    <button id= "kbj" class="badge bg-secondary">J</button>
-                    <button id= "kbk" class="badge bg-secondary">K</button>
-                    <button id= "kbl" class="badge bg-secondary">L</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'a'}))" id= "kba" class="badge bg-secondary">A</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 's'}))" id= "kbs" class="badge bg-secondary">S</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'd'}))" id= "kbd" class="badge bg-secondary">D</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'f'}))" id= "kbf" class="badge bg-secondary">F</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'g'}))" id= "kbg" class="badge bg-secondary">G</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'h'}))" id= "kbh" class="badge bg-secondary">H</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'j'}))" id= "kbj" class="badge bg-secondary">J</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'k'}))" id= "kbk" class="badge bg-secondary">K</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'l'}))" id= "kbl" class="badge bg-secondary">L</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <button id= "kbz" class="badge bg-secondary">Z</button>
-                    <button id= "kbx" class="badge bg-secondary">X</button>
-                    <button id= "kbc" class="badge bg-secondary">C</button>
-                    <button id= "kbv" class="badge bg-secondary">V</button>
-                    <button id= "kbb" class="badge bg-secondary">B</button>
-                    <button id= "kbn" class="badge bg-secondary">N</button>
-                    <button id= "kbm" class="badge bg-secondary">M</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 13}))" id= "kbz" class="badge bg-secondary enter">Enter</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'z'}))" id= "kbz" class="badge bg-secondary">Z</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'x'}))" id= "kbx" class="badge bg-secondary">X</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'c'}))" id= "kbc" class="badge bg-secondary">C</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'v'}))" id= "kbv" class="badge bg-secondary">V</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'b'}))" id= "kbb" class="badge bg-secondary">B</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'n'}))" id= "kbn" class="badge bg-secondary">N</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'm'}))" id= "kbm" class="badge bg-secondary">M</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 8}))" id= "kbz" class="badge bg-secondary">⌫</button>
                 </div>
             </div>
         </div>
