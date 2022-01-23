@@ -39,6 +39,8 @@
                 width: 60px;
             }
             .kbrow{
+                max-width: 500px;
+                margin: 5px auto;
                 white-space: nowrap;
                 text-align: center;
             }
@@ -53,6 +55,18 @@
             .kbrow .enter{
                 width: 60px;
             }
+
+            .col-md{
+                width: 100%;
+                padding: 0;
+            }
+
+            .fixed-row-bottom { 
+                position: fixed; bottom: 0; left: 0; right: 0;
+                width: 100%;
+                padding: 0;
+            }
+            
         </style>
         </style>
         <script type="text/javascript"> 
@@ -63,7 +77,8 @@
             var numGuesses = 6;
             var currLetter = 1;
             var gameWin = false;
-            var word = words[random];
+            //var word = words[random];
+            var word = "shuln";
             function newGame(rows, letters){
                 let numRows = 1;
                 for (let i = 0; i < rows; i++){
@@ -153,39 +168,42 @@
                         let child = children[i];
                         child.classList.remove("active");
                         child.classList.remove("btn-secondary");
-                        key.classList.remove("bg-secondary");
+                        key.classList.remove("btn-secondary");
                         if (letters.charAt(i) == word.charAt(i)){
                             // correct letter and place
                             child.classList.add("btn-success");                            
-                            key.classList.add("bg-success");
-                            key.classList.remove("bg-dark");
-                            key.classList.remove("bg-warning");
+                            key.classList.add("btn-success");
+                            key.classList.remove("btn-dark");
+                            key.classList.remove("btn-warning");
                         } else if (word.includes(letters.charAt(i))){
-                            //the guessed letter appears this many times in the word
-                            let timesinword = word.split(letters.charAt(i)).length-1;
+                            // correct letter but incorrect place
                             // get indices of where the guessed letter occurs in the guessed word
-                            var indices = [];
-                            for(var j=0; j<letters.length;j++) {
-                                if (letters[j] === letters.charAt(i)) indices.push(j);
-                            }
-                            // retain n number of indices, where n is the number of times the letter is in the actual word
-                            indices = indices.slice(0, timesinword);
-                            // if the current letter being evaluated is in the indices, mark it yellow (and mark keyboard yellow), otherwise make the tile dark
-                            if (indices.includes(i)){
+                            var guessindices = [];
+                            for(var j=0; j<letters.length;j++) { if (letters[j] === letters.charAt(i)) guessindices.push(j); }
+                            // get indices of where the guessed letter occurs in the actual word
+                            var actualindices = [];
+                            for(var j=0; j<word.length;j++) { if (word[j] === letters.charAt(i)) actualindices.push(j); }
+                            // indices of this letter in the guess and the real word
+                            let concatArr = guessindices.concat(actualindices);
+                            concatArr = [...new Set([...actualindices,...guessindices])];
+                            // find where the correctly guessed indices are. If this is the same as the times the letter appears in the word, extraneous letters should not turn yellow
+                            const intersection = guessindices.filter(element => actualindices.includes(element));                            
+                            // if the current letter being evaluated is in the indices, mark it yellow (and mark keyboard yellow), otherwise make the tile dark; ALSO we can only mark yellow if the guessed letter count is less than the actual number of times it shows up. If it's equal, then that position will turn green from code above.
+                            if (concatArr.includes(i) && intersection.length < actualindices.length){
                                 child.classList.add("btn-warning");
-                                key.classList.add("bg-warning");
-                                key.classList.remove("bg-dark");
+                                key.classList.add("btn-warning");
+                                key.classList.remove("btn-dark");
                             } else {
                                 child.classList.add("btn-dark");
                             }
                         } else {
                             // incorrect letter
                             child.classList.add("btn-dark");
-                            if(!key.classList.contains("bg-success")){
-                                key.classList.add("bg-dark");
+                            if(!key.classList.contains("btn-success")){
+                                key.classList.add("btn-dark");
                             }
                         }
-                        key.classList.remove("bg-secondary");
+                        key.classList.remove("btn-secondary");
                     }    
                 }
             }
@@ -233,45 +251,47 @@
                     </div>
                 </div>
             </div>
+            <div class="fixed-row-bottom">
             <div class="kbrow row">
                 <div class="col-md">
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'q'}))" id= "kbq" class="btn bg-secondary">Q</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'w'}))" id= "kbw" class="btn bg-secondary">W</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'e'}))" id= "kbe" class="btn bg-secondary">E</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'r'}))" id= "kbr" class="btn bg-secondary">R</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 't'}))" id= "kbt" class="btn bg-secondary">T</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'y'}))" id= "kby" class="btn bg-secondary">Y</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'u'}))" id= "kbu" class="btn bg-secondary">U</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'i'}))" id= "kbi" class="btn bg-secondary">I</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'o'}))" id= "kbo" class="btn bg-secondary">O</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'p'}))" id= "kbp" class="btn bg-secondary">P</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'q'}))" id= "kbq" class="btn btn-secondary">Q</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'w'}))" id= "kbw" class="btn btn-secondary">W</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'e'}))" id= "kbe" class="btn btn-secondary">E</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'r'}))" id= "kbr" class="btn btn-secondary">R</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 't'}))" id= "kbt" class="btn btn-secondary">T</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'y'}))" id= "kby" class="btn btn-secondary">Y</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'u'}))" id= "kbu" class="btn btn-secondary">U</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'i'}))" id= "kbi" class="btn btn-secondary">I</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'o'}))" id= "kbo" class="btn btn-secondary">O</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'p'}))" id= "kbp" class="btn btn-secondary">P</button>
                 </div>
             </div>
             <div class="kbrow row">
                 <div class="col-md">
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'a'}))" id= "kba" class="btn bg-secondary">A</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 's'}))" id= "kbs" class="btn bg-secondary">S</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'd'}))" id= "kbd" class="btn bg-secondary">D</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'f'}))" id= "kbf" class="btn bg-secondary">F</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'g'}))" id= "kbg" class="btn bg-secondary">G</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'h'}))" id= "kbh" class="btn bg-secondary">H</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'j'}))" id= "kbj" class="btn bg-secondary">J</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'k'}))" id= "kbk" class="btn bg-secondary">K</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'l'}))" id= "kbl" class="btn bg-secondary">L</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'a'}))" id= "kba" class="btn btn-secondary">A</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 's'}))" id= "kbs" class="btn btn-secondary">S</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'd'}))" id= "kbd" class="btn btn-secondary">D</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'f'}))" id= "kbf" class="btn btn-secondary">F</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'g'}))" id= "kbtn" class="btn btn-secondary">G</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'h'}))" id= "kbh" class="btn btn-secondary">H</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'j'}))" id= "kbj" class="btn btn-secondary">J</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'k'}))" id= "kbk" class="btn btn-secondary">K</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'l'}))" id= "kbl" class="btn btn-secondary">L</button>
                 </div>
             </div>
             <div class="kbrow row">
                 <div class="col-md">
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 13}))" id= "kbz" class="btn bg-secondary enter">Enter</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'z'}))" id= "kbz" class="btn bg-secondary">Z</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'x'}))" id= "kbx" class="btn bg-secondary">X</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'c'}))" id= "kbc" class="btn bg-secondary">C</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'v'}))" id= "kbv" class="btn bg-secondary">V</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'b'}))" id= "kbb" class="btn bg-secondary">B</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'n'}))" id= "kbn" class="btn bg-secondary">N</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'm'}))" id= "kbm" class="btn bg-secondary">M</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 8}))" id= "kbz" class="btn bg-secondary">⌫</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 13}))" id= "kbz" class="btn btn-secondary enter">Enter</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'z'}))" id= "kbz" class="btn btn-secondary">Z</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'x'}))" id= "kbx" class="btn btn-secondary">X</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'c'}))" id= "kbc" class="btn btn-secondary">C</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'v'}))" id= "kbv" class="btn btn-secondary">V</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'b'}))" id= "kbb" class="btn btn-secondary">B</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'n'}))" id= "kbn" class="btn btn-secondary">N</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'm'}))" id= "kbm" class="btn btn-secondary">M</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 8}))" id= "kbz" class="btn btn-secondary">⌫</button>
                 </div>
+            </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
