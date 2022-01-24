@@ -252,6 +252,7 @@
                             tiles[i].classList.add("btn-dark");
                             if(!key.classList.contains("btn-success")){
                                 key.classList.add("btn-dark");
+                                key.classList.remove("btn-secondary");
                             }
                         }
                     }
@@ -349,7 +350,7 @@
             </div>
             <div class="kbrow row">
                 <div class="col-md">
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 13}))" id= "kbz" class="btn btn-secondary enter">Enter</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 13}))" id= "kbenter" class="btn btn-secondary enter">Enter</button>
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'z'}))" id= "kbz" class="btn btn-secondary">Z</button>
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'x'}))" id= "kbx" class="btn btn-secondary">X</button>
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'c'}))" id= "kbc" class="btn btn-secondary">C</button>
@@ -357,7 +358,7 @@
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'b'}))" id= "kbb" class="btn btn-secondary">B</button>
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'n'}))" id= "kbn" class="btn btn-secondary">N</button>
                     <button onclick="keyPressed(new KeyboardEvent('keydown', {'key': 'm'}))" id= "kbm" class="btn btn-secondary">M</button>
-                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 8}))" id= "kbz" class="btn btn-secondary">⌫</button>
+                    <button onclick="keyPressed(new KeyboardEvent('keydown', {'keyCode': 8}))" id= "kbbackspace" class="btn btn-secondary">⌫</button>
                 </div>
             </div>
             </div>
