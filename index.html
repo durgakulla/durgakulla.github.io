@@ -89,8 +89,7 @@
             var numGuesses = 6;
             var currLetter = 1;
             var gameWin = false;
-            //var word = words[random];
-            var word = "prick";
+            var word = words[random];
             function newGame(rows, letters){
                 let numRows = 1;
                 for (let i = 0; i < rows; i++){
@@ -137,36 +136,44 @@
                     updateRow(currRow);
                 }
                 //if enter is pressed
-                if (e.keyCode == 13 && row.getAttribute("letters").length == maxLength){
-                    if(words.includes(row.getAttribute("letters").toLowerCase())){
-                        if (currRow < numGuesses){       
-                                updateGuess(currRow);
-                                if (currRow < numGuesses && !gameWin){
-                                    currRow++;
-                                    currLetter = 1;
-                                    updateRow(currRow);
-                                }
-                                if (gameWin){
-                                    /// WIN CODE
-                                    if (currRow == 1){
-                                        alert("Godlike!");
-                                    } else if (currRow == 2){
-                                        alert("Phenomenal!");
-                                    } else if (currRow == 3){
-                                        alert("Amazing!");
-                                    } else if (currRow == 4){
-                                        alert("Very good!");
-                                    } else if (currRow == 5){
-                                        alert("Good job!");
-                                    } else if (currRow == 6){
-                                        alert("You got it in the end!");
+                if (e.keyCode == 13){
+                    if (row.getAttribute("letters").length == maxLength){
+                        if(words.includes(row.getAttribute("letters").toLowerCase())){
+                            if (currRow < numGuesses){       
+                                    updateGuess(currRow);
+                                    if (currRow < numGuesses && !gameWin){
+                                        currRow++;
+                                        currLetter = 1;
+                                        updateRow(currRow);
                                     }
-                                }
+                                    if (gameWin){
+                                        /// WIN CODE
+                                        if (currRow == 1){
+                                            alert("Godlike!");
+                                        } else if (currRow == 2){
+                                            alert("Phenomenal!");
+                                        } else if (currRow == 3){
+                                            alert("Amazing!");
+                                        } else if (currRow == 4){
+                                            alert("Very good!");
+                                        } else if (currRow == 5){
+                                            alert("Good job!");
+                                        } else if (currRow == 6){
+                                            alert("You got it in the end!");
+                                        }
+                                    }
+                            } else {
+                                updateGuess(currRow);
+                                // GAME FAILED CODE
+                                alert("Better luck next time. The word was '" + word + "'");
+                            }
                         } else {
-                            updateGuess(currRow);
-                            // GAME FAILED CODE
-                            alert("Better luck next time. The word was '" + word + "'");
+                            //THIS WORD IS NOT IN THE DICTIONARY!!!
+                            redRow();
                         }
+                    }  else {
+                            //THIS WORD IS NOT IN THE DICTIONARY!!!
+                            redRow();
                     }
                 }
             }
@@ -280,13 +287,30 @@
                     nextLetter.classList.remove("active");    
                 }
             }
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            function redRow(){
+                let row = document.getElementById("row" + currRow);
+                let tiles = row.children;
+                async function lightup() {
+                    for (let i = 0; i < tiles.length; i++){
+                        tiles[i].classList.add("btn-danger");
+                    }
+                    await sleep(500);
+                    for (let i = 0; i < tiles.length; i++){
+                        tiles[i].classList.remove("btn-danger");
+                    }
+                }
+                lightup();
+            }
         </script> 
     </head>
     <body onLoad="addEventListener('keydown', keyPressed); newGame(6,5);">
         <div id="game" class="container justify-content-center">
             <div class="row">
                 <div class="col-md logo">
-                    <h1>Wurdle</h1>
+                    <h1>Wurdle.</h1>
                 </div>
             </div>
             <div class="row">
