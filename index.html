@@ -28,12 +28,18 @@
             }
             .display{
                 width: 100%;
+                margin: 0 !important;
             }
             #display .btn{
+                margin: 0 !important;
                 width: 75px;
                 height: 75px;
                 pointer-events: none;
                 text-transform: uppercase;
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: rgb(27, 27, 27);
+                z-index: -100 !important;
             }
             .enter{
                 width: 60px;
@@ -45,7 +51,8 @@
                 text-align: center;
             }
             .kbrow .btn{
-                width: 8%;
+                width: 100%;
+                max-width: 33px;
                 height: 40px;
                 font-size: 1rem;
                 text-align: center;
@@ -54,18 +61,23 @@
             }
             .kbrow .enter{
                 width: 60px;
+                max-width: 60px;
             }
 
             .col-md{
                 width: 100%;
                 padding: 0;
             }
-
-            .fixed-row-bottom { 
-                position: fixed; bottom: 0; left: 0; right: 0;
-                width: 100%;
-                padding: 0;
+            
+            @media all and (min-width:0px) and (max-width: 800px) {
+                .fixed-row-bottom { 
+                    position: fixed; bottom: 10px; left: 0; right: 0;
+                    width: 100%;
+                    padding: 0;
+                }
             }
+
+            
             
         </style>
         </style>
@@ -78,7 +90,7 @@
             var currLetter = 1;
             var gameWin = false;
             //var word = words[random];
-            var word = "shuln";
+            var word = "prick";
             function newGame(rows, letters){
                 let numRows = 1;
                 for (let i = 0; i < rows; i++){
@@ -127,8 +139,7 @@
                 //if enter is pressed
                 if (e.keyCode == 13 && row.getAttribute("letters").length == maxLength){
                     if(words.includes(row.getAttribute("letters").toLowerCase())){
-                        if (currRow < numGuesses){
-                            
+                        if (currRow < numGuesses){       
                                 updateGuess(currRow);
                                 if (currRow < numGuesses && !gameWin){
                                     currRow++;
@@ -136,76 +147,109 @@
                                     updateRow(currRow);
                                 }
                                 if (gameWin){
-                                    alert('win');
+                                    /// WIN CODE
+                                    if (currRow == 1){
+                                        alert("Godlike!");
+                                    } else if (currRow == 2){
+                                        alert("Phenomenal!");
+                                    } else if (currRow == 3){
+                                        alert("Amazing!");
+                                    } else if (currRow == 4){
+                                        alert("Very good!");
+                                    } else if (currRow == 5){
+                                        alert("Good job!");
+                                    } else if (currRow == 6){
+                                        alert("You got it in the end!");
+                                    }
                                 }
                         } else {
                             updateGuess(currRow);
-                            // force end game
-                            alert("Word was: " + word);
+                            // GAME FAILED CODE
+                            alert("Better luck next time. The word was '" + word + "'");
                         }
                     }
                 }
             }
             function updateGuess(currRow){
                 let row = document.getElementById("row" + currRow);
-                let children = row.children;
-                let letters = row.getAttribute("letters").toLowerCase();
+                let tiles = row.children;
+                var letters = row.getAttribute("letters").toLowerCase();
+                nletters = letters.split("");
+                var nword = word.split("");
+                const countChar = (str) => {
+                    const counts = {};
+                    for (const s of str) {
+                        if (counts[s]) {
+                        counts[s]++
+                        } else {
+                        counts[s] = 1
+                        }
+                    }
+                    return counts;
+                }
+                var letterHistogram = countChar(letters.toLowerCase());
+                var wordHistogram = countChar(word.toLowerCase());
+
                 if (letters == word){
                     //game win
-                    for (let i = 0; i < children.length; i++){
-                        let child = children[i];
-                        child.classList.remove("active");
-                        child.classList.remove("btn-secondary");
-                        child.classList.add("btn-success");
+                    for (let i = 0; i < nletters.length; i++){
+                        tiles[i].classList.remove("active");
+                        tiles[i].classList.remove("btn-secondary");
+                        tiles[i].classList.add("btn-success");
+                        let key = document.getElementById("kb" + nletters[i]);
+                        key.classList.remove("btn-warning");
+                        key.classList.add("btn-success");
                     }
                     // force end game
                     gameWin = true;
-                    alert("Very good!");
                 } else {
-                    //check letters one by one then update the board and keyboard
-                    for (var i = 0; i < children.length; i++){
-                        let key = document.getElementById("kb" + letters.charAt(i));
-                        let child = children[i];
-                        child.classList.remove("active");
-                        child.classList.remove("btn-secondary");
+                    // first remove all the classes from the grid button, they will fill up with one of 3 options (green, yellow, dark)
+                    // also remove classes from the keyboard key, it will also fill up with something else
+                    for (let i=0; i<nletters.length; i++){    
+                        tiles[i].classList.remove("active");
+                        let key = document.getElementById("kb" + nletters[i]);
                         key.classList.remove("btn-secondary");
-                        if (letters.charAt(i) == word.charAt(i)){
-                            // correct letter and place
-                            child.classList.add("btn-success");                            
+                        if (nletters[i] == nword[i]){
+                            //correct, right place, take out the letter from both histograms
+                            letterHistogram[nletters[i]]--;
+                            wordHistogram[nletters[i]]--;
+                            tiles[i].classList.add("btn-success");                            
                             key.classList.add("btn-success");
                             key.classList.remove("btn-dark");
+                            tiles[i].classList.remove("btn-secondary");
                             key.classList.remove("btn-warning");
-                        } else if (word.includes(letters.charAt(i))){
-                            // correct letter but incorrect place
-                            // get indices of where the guessed letter occurs in the guessed word
-                            var guessindices = [];
-                            for(var j=0; j<letters.length;j++) { if (letters[j] === letters.charAt(i)) guessindices.push(j); }
-                            // get indices of where the guessed letter occurs in the actual word
-                            var actualindices = [];
-                            for(var j=0; j<word.length;j++) { if (word[j] === letters.charAt(i)) actualindices.push(j); }
-                            // indices of this letter in the guess and the real word
-                            let concatArr = guessindices.concat(actualindices);
-                            concatArr = [...new Set([...actualindices,...guessindices])];
-                            // find where the correctly guessed indices are. If this is the same as the times the letter appears in the word, extraneous letters should not turn yellow
-                            const intersection = guessindices.filter(element => actualindices.includes(element));                            
-                            // if the current letter being evaluated is in the indices, mark it yellow (and mark keyboard yellow), otherwise make the tile dark; ALSO we can only mark yellow if the guessed letter count is less than the actual number of times it shows up. If it's equal, then that position will turn green from code above.
-                            if (concatArr.includes(i) && intersection.length < actualindices.length){
-                                child.classList.add("btn-warning");
-                                key.classList.add("btn-warning");
-                                key.classList.remove("btn-dark");
-                            } else {
-                                child.classList.add("btn-dark");
+                        }
+                    }
+                    // now we need to deal with letters that are not in the exact position but there are multiples of
+                    for (let i=0; i<nletters.length; i++){
+                        let key = document.getElementById("kb" + nletters[i]);
+                        key.classList.remove("btn-secondary");
+                        if (nletters[i] != nword[i] && wordHistogram[nletters[i]] != 0){
+                            //this letter is not an exact match, but is in the word. It will light up yellow as long as there are duplicates of this letter in the word. Decrement the letter count in the word histogram for every word so extraneous letters won't light up.
+                            tiles[i].classList.add("btn-warning");
+                            key.classList.add("btn-warning");
+                            key.classList.remove("btn-dark");
+                            wordHistogram[nletters[i]]--;
+                        } else if (nletters[i] != nword[i] && wordHistogram[nletters[i]] == 0){
+                            if(!key.classList.contains("btn-success") && !key.classList.contains("btn-warning")){
+                                key.classList.add("btn-dark");
                             }
-                        } else {
-                            // incorrect letter
-                            child.classList.add("btn-dark");
+                            tiles[i].classList.add("btn-dark");
+                        }
+                    }
+                    // now just darken any guessed letters that are not at all in the actual word!
+                    for (let i=0; i<nletters.length; i++){
+                        let key = document.getElementById("kb" + nletters[i]);
+                        if (!nword.includes(nletters[i])){
+                            //this letter is not in the word at all, change the colors now!   
+                            tiles[i].classList.add("btn-dark");
                             if(!key.classList.contains("btn-success")){
                                 key.classList.add("btn-dark");
                             }
                         }
-                        key.classList.remove("btn-secondary");
-                    }    
+                    }
                 }
+                
             }
             function removeItemOnce(arr, value) {
                 let index = arr.indexOf(value);
