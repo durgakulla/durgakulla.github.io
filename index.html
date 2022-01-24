@@ -164,8 +164,25 @@
                                     }
                             } else {
                                 updateGuess(currRow);
+                                if (gameWin){
+                                    // WIN CODE
+                                    if (currRow == 1){
+                                        alert("Godlike!");
+                                    } else if (currRow == 2){
+                                        alert("Phenomenal!");
+                                    } else if (currRow == 3){
+                                        alert("Amazing!");
+                                    } else if (currRow == 4){
+                                        alert("Very good!");
+                                    } else if (currRow == 5){
+                                        alert("Good job!");
+                                    } else if (currRow == 6){
+                                        alert("You got it in the end!");
+                                    }
+                                } else {
                                 // GAME FAILED CODE
                                 alert("Better luck next time. The word was '" + word + "'");
+                                }
                             }
                         } else {
                             //THIS WORD IS NOT IN THE DICTIONARY!!!
