@@ -106,9 +106,8 @@ a {
     background-color: rgb(27, 27, 27);
 }
 
-.keyboard button:active {
-    outline: #0ec972 auto 5px !important;  
-    background-color: white !important;
+.keyboard button{
+    -webkit-tap-highlight-color: rgb(136, 136, 136);
 }
 
 .kbrow .btn-secondary{
