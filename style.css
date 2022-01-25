@@ -55,8 +55,8 @@ h1{
     color:rgb(165, 165, 165);
 }
 .display .active{
-    background-color: rgb(88, 88, 88);
-    color:rgb(0, 0, 0);
+    background-color: rgb(52 52 52);
+    color:rgb(157 157 157);
 }
 .enter{
     width: 60px;
@@ -97,10 +97,20 @@ h1{
 .kbrow .enter{
     width: 60px !important;
     max-width: 60px;
+    color: #89dfb7;
+    background-color: #343434 !important;
 }
 .kbrow .backspace{
     width: 60px !important;
     max-width: 60px;
+    color: #89dfb7;
+    background-color: #343434 !important;
+}
+.kbrow .arrow{
+    width: 60px !important;
+    max-width: 50px;
+    color: #89dfb7;
+    background-color: #343434 !important;
 }
 #gameWon{
     display: none;
