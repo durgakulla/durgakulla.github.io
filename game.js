@@ -37,6 +37,7 @@ if (randomLength == 4){
 }
 var maxLength = word.length;
 var numGuesses = word.length + 1;
+
 function newGame(){
     var letters = word.length; 
     let numRows = 1;
@@ -61,6 +62,7 @@ function newGame(){
     letter = document.getElementById("letter"+currRow+currLetter);
     letter.classList.add("active");
 }
+
 async function keyPressed(e){
     var row = document.getElementById("row" + currRow);
     let tiles = row.children;
@@ -104,7 +106,6 @@ async function keyPressed(e){
                 letter.classList.remove("active");
                 if (currRow < numGuesses){       
                         results = updateGuess(currRow);
-                        guessLog.push(results);
                         if (currRow < numGuesses && !gameWin){
                             colorTiles(results);
                             currRow++;
@@ -119,7 +120,6 @@ async function keyPressed(e){
                         }
                 } else {
                     results = updateGuess(currRow);
-                    guessLog.push(results);
                     colorTiles(results);
                     if (gameWin){
                         // WIN CODE
@@ -193,6 +193,8 @@ function updateGuess(currRow){
         //game win
         gameWin = true;
     }
+    // Push results to the guess log (and also the guessed letters)
+    guessLog.push([results, nletters]);
     return results;
 }
 function removeItemOnce(arr, value) {
@@ -277,22 +279,24 @@ async function colorTiles(results){
 
 function gameWinAlert(){
     summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n";
+    // look through the guess log and make a grid with just colors to share
     for (i=0; i<guessLog.length; i++){
-        for (j=0; j<guessLog[i].length;j++){
-            if (guessLog[i][j] == 1){
+        for (j=0; j<guessLog[i][0].length;j++){
+            if (guessLog[i][0][j] == 1){
                 //green
                 summary += "🟩";
-
-            } else if (guessLog[i][j] == 2){
+            } else if (guessLog[i][0][j] == 2){
                 //yellow
                 summary += "🟨";
-            } else if (guessLog[i][j] == 3){
+            } else if (guessLog[i][0][j] == 3){
                 //dark
                 summary += "⬜";
             }
         }
         summary += "\n";
     }
+    var arrStr = encodeURIComponent(JSON.stringify(guessLog));
+    summary += "<a href='" + "?arr=" + arrStr + "'>Link</a>";
     document.getElementById("gameWon").style.display = "block";
     document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
