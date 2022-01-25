@@ -35,7 +35,6 @@ if (randomLength == 4){
     const random = Math.floor(Math.random() * sevens.length);
     var word = sevens[random];    
 }
-var word = "iranian";
 var maxLength = word.length;
 var numGuesses = word.length + 1;
 function newGame(){
