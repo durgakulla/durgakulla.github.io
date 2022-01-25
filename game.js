@@ -310,9 +310,10 @@ async function shareScore(){
         },
         body: JSON.stringify({destination: 'https://durgak.com/share.html?arr=' + arrStr})
     };   
-      fetch('https://api.rebrandly.com/v1/links', options)
+    fetch('https://api.rebrandly.com/v1/links', options)
+        .then(response => response.json())
         .then(response => {
-            response.json()
+            summary += response.shortUrl;
             try {
                 await navigator.share({ title: "Wurdle Score", text: summary });
                 console.log("Data was shared successfully");
@@ -320,6 +321,5 @@ async function shareScore(){
                 console.error("Share failed:", err.message);
               }
         })
-        .then(response => summary += response.shortUrl)
         .catch(err => console.error(err));
 }
