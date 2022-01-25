@@ -21,6 +21,7 @@ var currLetter = 1;
 var gameWin = false;
 var guessLog = [];
 var summary = "";
+var shortUrl = "";
 var animationSpeed = 300;
 if (randomLength == 4){
     const random = Math.floor(Math.random() * fours.length);
@@ -300,7 +301,6 @@ function gameWinAlert(){
 }
 
 async function shareScore(){
-    var shortUrl = "";
     var arrStr = encodeURIComponent(JSON.stringify(guessLog));
     if (shortUrl == ""){
         const options = {
