@@ -300,26 +300,37 @@ function gameWinAlert(){
 }
 
 async function shareScore(){
+    var shortUrl = "";
     var arrStr = encodeURIComponent(JSON.stringify(guessLog));
-    const options = {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          apikey: '06b8b1ea48af44f5ad5a2e59e6dabb1a'
-        },
-        body: JSON.stringify({destination: 'https://durgak.com/share.html?arr=' + arrStr})
-    };   
-    fetch('https://api.rebrandly.com/v1/links', options)
-        .then(response => response.json())
-        .then(async response => {
-            summary += response.shortUrl;
-            try {
-                await navigator.share({ title: "Wurdle Score", text: summary });
-                console.log("Data was shared successfully");
-              } catch (err) {
-                console.error("Share failed:", err.message);
-              }
-        })
-        .catch(err => console.error(err));
+    if (shortUrl == ""){
+        const options = {
+            method: 'POST',
+            headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            apikey: '06b8b1ea48af44f5ad5a2e59e6dabb1a'
+            },
+            body: JSON.stringify({destination: 'https://durgak.com/share.html?arr=' + arrStr})
+        };   
+        fetch('https://api.rebrandly.com/v1/links', options)
+            .then(response => response.json())
+            .then(async response => {
+                shortUrl = response.shortUrl;
+                summary += shortUrl;
+                try {
+                    await navigator.share({ title: "Wurdle Score", text: summary });
+                    console.log("Data was shared successfully");
+                } catch (err) {
+                    console.error("Share failed:", err.message);
+                }
+            })
+            .catch(err => console.error(err));
+    } else {
+        try {
+            await navigator.share({ title: "Wurdle Score", text: summary });
+            console.log("Data was shared successfully");
+        } catch (err) {
+            console.error("Share failed:", err.message);
+        }
+    }
 }
