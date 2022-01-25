@@ -107,7 +107,7 @@ a {
 }
 
 .keyboard button{
-    -webkit-tap-highlight-color: rgb(136, 136, 136);
+    -webkit-tap-highlight-color: rgb(136, 136, 136) !important;
 }
 
 .kbrow .btn-secondary{
