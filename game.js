@@ -1,13 +1,3 @@
-async function shareScore(){
-    console.log("click");
-    try {
-      await navigator.share({ title: "Wurdle Score", text: "I got the word in 3 guesses!" });
-      console.log("Data was shared successfully");
-    } catch (err) {
-      console.error("Share failed:", err.message);
-    }
-}
-  
 var fours = [];
 var fives = [];
 var sixes = [];
@@ -23,11 +13,15 @@ for (let i=0; i < words.length; i++){
         sevens.push(words[i]);
     }
 }
+validate = validate.concat(words);
 validate = validate.map(word => word.toLowerCase());
 const randomLength = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
 var currRow = 1;
 var currLetter = 1;
 var gameWin = false;
+var guessLog = [];
+var summary = "";
+var animationSpeed = 300;
 if (randomLength == 4){
     const random = Math.floor(Math.random() * fours.length);
     var word = fours[random];    
@@ -41,6 +35,7 @@ if (randomLength == 4){
     const random = Math.floor(Math.random() * sevens.length);
     var word = sevens[random];    
 }
+var word = "iranian";
 var maxLength = word.length;
 var numGuesses = word.length + 1;
 function newGame(){
@@ -110,6 +105,7 @@ async function keyPressed(e){
                 letter.classList.remove("active");
                 if (currRow < numGuesses){       
                         results = updateGuess(currRow);
+                        guessLog.push(results);
                         if (currRow < numGuesses && !gameWin){
                             colorTiles(results);
                             currRow++;
@@ -119,19 +115,20 @@ async function keyPressed(e){
                         if (gameWin){
                             colorTiles(results);
                             /// WIN CODE
-                            await sleep(400*(word.length+1));
+                            await sleep(animationSpeed*(word.length+1));
                             gameWinAlert();
                         }
                 } else {
-                    updateGuess(currRow);
+                    results = updateGuess(currRow);
+                    guessLog.push(results);
                     colorTiles(results);
                     if (gameWin){
                         // WIN CODE
-                        await sleep(400*(word.length+1));
+                        await sleep(animationSpeed*(word.length+1));
                         gameWinAlert();
                     } else {
                         // LOSE CODE
-                        await sleep(400*(word.length+1));
+                        await sleep(animationSpeed*(word.length+1));
                         alert("Better luck next time. The word was '" + word + "'");
                     }
                 }
@@ -164,7 +161,7 @@ function updateGuess(currRow){
     }
     var letterHistogram = countChar(letters.toLowerCase());
     var wordHistogram = countChar(word.toLowerCase());
-    var results = {};
+    var results = [];
     // first remove all the classes from the grid button, they will fill up with one of 3 options (green, yellow, dark)
     // also remove classes from the keyboard key, it will also fill up with something else
     for (let i=0; i<nletters.length; i++){    
@@ -245,18 +242,13 @@ function redRow(){
     }
     lightup();
 }
-function gameWinAlert(){
-    alert("great work!")
-}
 
 async function colorTiles(results){
-    console.log(results);
     let row = document.getElementById("row" + currRow);
     let tiles = row.children;
     // Now slowly update the tiles to reflect the results (for suspense) 
     for (let i=0; i<nletters.length; i++){
-        await sleep(400);
-        console.log(results[i]);
+        await sleep(animationSpeed);
         tiles[i].classList.remove("active");
         tiles[i].classList.remove("btn-secondary");
         let key = document.getElementById("kb" + nletters[i]);
@@ -281,5 +273,36 @@ async function colorTiles(results){
                 key.classList.remove("btn-secondary");
             }
         }
+    }
+}
+
+function gameWinAlert(){
+    summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n";
+    for (i=0; i<guessLog.length; i++){
+        for (j=0; j<guessLog[i].length;j++){
+            if (guessLog[i][j] == 1){
+                //green
+                summary += "🟩";
+
+            } else if (guessLog[i][j] == 2){
+                //yellow
+                summary += "🟨";
+            } else if (guessLog[i][j] == 3){
+                //dark
+                summary += "⬜";
+            }
+        }
+        summary += "\n";
+    }
+    document.getElementById("gameWon").style.display = "block";
+    document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
+}
+
+async function shareScore(){
+    try {
+      await navigator.share({ title: "Wurdle Score", text: summary });
+      console.log("Data was shared successfully");
+    } catch (err) {
+      console.error("Share failed:", err.message);
     }
 }
