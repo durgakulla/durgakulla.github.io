@@ -296,7 +296,7 @@ function gameWinAlert(){
         summary += "\n";
     }
     var arrStr = encodeURIComponent(JSON.stringify(guessLog));
-    summary += "<a href='" + "?arr=" + arrStr + "'>Link</a>";
+    summary += "<a href='" + "durgak.com/share.html?arr=" + arrStr + "'>Link</a>";
     document.getElementById("gameWon").style.display = "block";
     document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
