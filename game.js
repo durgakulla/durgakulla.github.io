@@ -295,12 +295,12 @@ function gameWinAlert(){
         }
         summary += "\n";
     }
-    var arrStr = encodeURIComponent(JSON.stringify(guessLog));
     document.getElementById("gameWon").style.display = "block";
     document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
 
 async function shareScore(){
+    var arrStr = encodeURIComponent(JSON.stringify(guessLog));
     const options = {
         method: 'POST',
         headers: {
