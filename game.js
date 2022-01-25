@@ -312,7 +312,7 @@ async function shareScore(){
     };   
     fetch('https://api.rebrandly.com/v1/links', options)
         .then(response => response.json())
-        .then(response => {
+        .then(response => async () => {
             summary += response.shortUrl;
             try {
                 await navigator.share({ title: "Wurdle Score", text: summary });
