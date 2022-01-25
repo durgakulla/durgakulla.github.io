@@ -296,12 +296,24 @@ function gameWinAlert(){
         summary += "\n";
     }
     var arrStr = encodeURIComponent(JSON.stringify(guessLog));
-    summary += "<a href='" + "durgak.com/share.html?arr=" + arrStr + "'>Link</a>";
     document.getElementById("gameWon").style.display = "block";
     document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
 
 async function shareScore(){
+    const options = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          apikey: '06b8b1ea48af44f5ad5a2e59e6dabb1a'
+        },
+        body: JSON.stringify({destination: 'https://durgak.com/share.html?arr=' + arrStr})
+    };   
+      fetch('https://api.rebrandly.com/v1/links', options)
+        .then(response => response.json())
+        .then(response => summary += response.shortUrl)
+        .catch(err => console.error(err));
     try {
       await navigator.share({ title: "Wurdle Score", text: summary });
       console.log("Data was shared successfully");

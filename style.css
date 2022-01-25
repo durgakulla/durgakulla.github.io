@@ -15,6 +15,13 @@ h1{
     margin-top:10px;
     font-family: 'Dongle', sans-serif;
 }
+.logo a {
+    text-decoration: none;
+}
+a {
+    color: #0ec972;
+    text-decoration: none;
+}
 .btn {
     font-size: 2vh;
 }
