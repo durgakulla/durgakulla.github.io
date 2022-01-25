@@ -94,6 +94,18 @@ a {
     border-radius: 10px;
 }
 
+.kbplaceholder{
+    min-height: 180px;
+}
+.keyboard{
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+}
+
 .keyboard button:active {
     outline: #0ec972 auto 5px !important;  
     background-color: white !important;
