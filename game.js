@@ -1,28 +1,36 @@
-var fours = [];
-var fives = [];
-var sixes = [];
-var sevens = [];
-for (let i=0; i < words.length; i++){
-    if(words[i].length == 4){
-        fours.push(words[i]);
-    } else if (words[i].length == 5){
-        fives.push(words[i]);
-    } else if (words[i].length == 6){
-        sixes.push(words[i]);
-    } else if (words[i].length == 7){
-        sevens.push(words[i]);
-    }
-}
-validate = validate.concat(words);
-validate = validate.map(word => word.toLowerCase());
-const randomLength = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
+!function(n,t,e){function u(n){var t=this,e=function(){var s=4022871197;return function(n){n=String(n);for(var t=0;t<n.length;t++){var e=.02519603282416938*(s+=n.charCodeAt(t));e-=s=e>>>0,s=(e*=s)>>>0,s+=4294967296*(e-=s)}return 2.3283064365386963e-10*(s>>>0)}}();t.next=function(){var n=2091639*t.s0+2.3283064365386963e-10*t.c;return t.s0=t.s1,t.s1=t.s2,t.s2=n-(t.c=0|n)},t.c=1,t.s0=e(" "),t.s1=e(" "),t.s2=e(" "),t.s0-=e(n),t.s0<0&&(t.s0+=1),t.s1-=e(n),t.s1<0&&(t.s1+=1),t.s2-=e(n),t.s2<0&&(t.s2+=1),e=null}function o(n,t){return t.c=n.c,t.s0=n.s0,t.s1=n.s1,t.s2=n.s2,t}function s(n,t){var e=new u(n),s=t&&t.state,r=e.next;return r.int32=function(){return 4294967296*e.next()|0},r.double=function(){return r()+11102230246251565e-32*(2097152*r()|0)},r.quick=r,s&&("object"==typeof s&&o(s,e),r.state=function(){return o(e,{})}),r}t&&t.exports?t.exports=s:e&&e.amd?e(function(){return s}):this.alea=s}(0,"object"==typeof module&&module,"function"==typeof define&&define);
 var currRow = 1;
 var currLetter = 1;
 var gameWin = false;
 var guessLog = [];
 var summary = "";
 var shortUrl = "";
+var word = "";
 var animationSpeed = 300;
+var wordLength = 5;
+var fours = [];
+var fives = [];
+var sixes = [];
+var sevens = [];
+for (let i=0; i < words.length; i++){ if(words[i].length == 4){ fours.push(words[i]); } else if (words[i].length == 5){ fives.push(words[i]); } else if (words[i].length == 6){ sixes.push(words[i]); } else if (words[i].length == 7){ sevens.push(words[i]); } }
+var words = fours.concat(fives, sixes, sevens);
+var today = new Date();
+let fullDate = today.getDate() + today.getMonth() + 1 + today.getFullYear();
+var arng = new alea(fullDate);
+var word = words[Math.round(arng()*words.length)];
+var validate = validate.concat(words);
+validate = validate.map(word => word.toLowerCase());
+var numGuesses = word.length+1;
+/*if(wordLength == 4){
+    var word = fours[Math.round(arng()*fours.length)];
+} else if (wordLength == 5){
+    var word = fives[Math.round(arng()*fives.length)];
+} else if (wordLength == 6){
+    var word = sixes[Math.round(arng()*sixes.length)];
+} else if (wordLength == 7){
+    var word = sevens[Math.round(arng()*sevens.length)];
+}*/
+/*const randomLength = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
 if (randomLength == 4){
     const random = Math.floor(Math.random() * fours.length);
     var word = fours[random];    
@@ -36,9 +44,7 @@ if (randomLength == 4){
     const random = Math.floor(Math.random() * sevens.length);
     var word = sevens[random];    
 }
-var maxLength = word.length;
-var numGuesses = word.length + 1;
-
+*/
 function newGame(){
     var letters = word.length; 
     let numRows = 1;
@@ -71,7 +77,7 @@ async function keyPressed(e){
     if ((/[a-zA-Z]/).test(e.key) && e.key.length == 1 && !gameWin) {
         tiles[currLetter-1].textContent = e.key;
         tiles[currLetter-1].setAttribute("letter", e.key);
-        if (currLetter < maxLength){
+        if (currLetter < word.length){
             currLetter++;
         }
         updateRow(currRow);
@@ -101,7 +107,7 @@ async function keyPressed(e){
     }
     //if enter is pressed
     if (e.keyCode == 13 && !gameWin){
-        if (row.getAttribute("letters").length == maxLength){
+        if (row.getAttribute("letters").length == word.length){
             if(validate.includes(row.getAttribute("letters").toLowerCase())){
                 letter = document.getElementById("letter"+currRow+currLetter);
                 letter.classList.remove("active");
@@ -130,6 +136,7 @@ async function keyPressed(e){
                         // LOSE CODE
                         await sleep(animationSpeed*(word.length+1));
                         alert("Better luck next time. The word was '" + word + "'");
+                        localStorage.setItem('winDay', fullDate);
                     }
                 }
             } else {
@@ -222,7 +229,7 @@ function updateRow(currRow){
         prevLetter = document.getElementById("letter"+currRow+(currLetter-1));
         prevLetter.classList.remove("active");    
     }
-    if (currLetter < maxLength){
+    if (currLetter < word.length){
         nextLetter = document.getElementById("letter"+currRow+(currLetter+1));
         nextLetter.classList.remove("active");    
     }
@@ -279,25 +286,30 @@ async function colorTiles(results){
 }
 
 function gameWinAlert(){
-    summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n";
-    // look through the guess log and make a grid with just colors to share
-    for (i=0; i<guessLog.length; i++){
-        for (j=0; j<guessLog[i][0].length;j++){
-            if (guessLog[i][0][j] == 1){
-                //green
-                summary += "🟩";
-            } else if (guessLog[i][0][j] == 2){
-                //yellow
-                summary += "🟨";
-            } else if (guessLog[i][0][j] == 3){
-                //dark
-                summary += "⬜";
+    if(localStorage.getItem('winDay') != fullDate){
+        localStorage.setItem('winDay', fullDate);
+        summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n";
+        // look through the guess log and make a grid with just colors to share
+        for (i=0; i<guessLog.length; i++){
+            for (j=0; j<guessLog[i][0].length;j++){
+                if (guessLog[i][0][j] == 1){
+                    //green
+                    summary += "🟩";
+                } else if (guessLog[i][0][j] == 2){
+                    //yellow
+                    summary += "🟨";
+                } else if (guessLog[i][0][j] == 3){
+                    //dark
+                    summary += "⬜";
+                }
             }
+            summary += "\n";
         }
-        summary += "\n";
+        document.getElementById("gameWon").style.display = "block";
+        document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
+    } else {
+        alert("You already played today!");
     }
-    document.getElementById("gameWon").style.display = "block";
-    document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
 
 async function shareScore(){
