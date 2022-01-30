@@ -288,7 +288,7 @@ async function colorTiles(results){
 function gameWinAlert(){
     if(localStorage.getItem('winDay') != fullDate){
         localStorage.setItem('winDay', fullDate);
-        summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n" + "Play the game: durgak.com" + "\n";
+        summary = "Wurdle " + String(today.getMonth()+1) + "/" + String(today.getDate()) + " -- " + currRow + "/" + numGuesses + "\n" + "Play the game: durgak.com" + "\n";
         // look through the guess log and make a grid with just colors to share
         for (i=0; i<guessLog.length; i++){
             for (j=0; j<guessLog[i][0].length;j++){
@@ -315,7 +315,7 @@ function gameWinAlert(){
 function gameLoseAlert(){
     if(localStorage.getItem('winDay') != fullDate){
         localStorage.setItem('winDay', fullDate);
-        summary = "Wurdle fail :( " + numGuesses + " guesses (" + word.length + " letters)" + "\n" + "Play the game: durgak.com" + "\n";
+        summary = "Wurdle " + String(today.getMonth()+1) + "/" + String(today.getDate()) + " fail :( " + numGuesses + " guesses" + "\n" + "Play the game: durgak.com" + "\n";
         // look through the guess log and make a grid with just colors to share
         for (i=0; i<guessLog.length; i++){
             for (j=0; j<guessLog[i][0].length;j++){
