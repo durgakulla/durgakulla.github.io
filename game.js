@@ -136,7 +136,7 @@ async function keyPressed(e){
                         // LOSE CODE
                         await sleep(animationSpeed*(word.length+1));
                         alert("Better luck next time. The word was '" + word + "'");
-                        localStorage.setItem('winDay', fullDate);
+                        gameLoseAlert();
                     }
                 }
             } else {
@@ -289,6 +289,33 @@ function gameWinAlert(){
     if(localStorage.getItem('winDay') != fullDate){
         localStorage.setItem('winDay', fullDate);
         summary = "Wurdle " + currRow + "/" + numGuesses + " (" + word.length + " letters)" + "\n";
+        // look through the guess log and make a grid with just colors to share
+        for (i=0; i<guessLog.length; i++){
+            for (j=0; j<guessLog[i][0].length;j++){
+                if (guessLog[i][0][j] == 1){
+                    //green
+                    summary += "🟩";
+                } else if (guessLog[i][0][j] == 2){
+                    //yellow
+                    summary += "🟨";
+                } else if (guessLog[i][0][j] == 3){
+                    //dark
+                    summary += "⬜";
+                }
+            }
+            summary += "\n";
+        }
+        document.getElementById("gameWon").style.display = "block";
+        document.getElementById("gameWon").innerHTML += summary.replace(/(?:\r\n|\r|\n)/g, '<br>');
+    } else {
+        alert("You already played today!");
+    }
+}
+
+function gameLoseAlert(){
+    if(localStorage.getItem('winDay') != fullDate){
+        localStorage.setItem('winDay', fullDate);
+        summary = "Wurdle fail :( " + numGuesses + " guesses (" + word.length + " letters)" + "\n";
         // look through the guess log and make a grid with just colors to share
         for (i=0; i<guessLog.length; i++){
             for (j=0; j<guessLog[i][0].length;j++){
