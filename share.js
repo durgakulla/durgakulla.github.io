@@ -25,6 +25,6 @@ if(localStorage.getItem('winDay') == fullDate){
     }
 } else {
     //Haven't played yet, go play the game
-    let goPlay = "To see this solution, " + "<a href='durgak.com'>" + "play today's puzzle first!" + "</a>";
-    document.getElementById("display").textContent(goPlay);
+    let goPlay = "Attempt today's puzzle to see this solution.";
+    document.getElementById("display").textContent = goPlay;
 }
